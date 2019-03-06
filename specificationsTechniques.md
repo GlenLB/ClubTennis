@@ -22,3 +22,9 @@
 * Mysql
 * Driver PDO 
 * Validation des requêtes dans PHPMyAdmin 
+
+### Sécurité :
+* Https pour le site en production
+* Requêtes SQL PDO préparées
+* HTML escaped
+* Hashage mdp

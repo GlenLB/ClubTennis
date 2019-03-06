@@ -1,10 +1,14 @@
 <?php
-// Router
+/**
+ * Routeur
+ */
 
 // Récupération de l'URI
 $requestURI = $_SERVER["REQUEST_URI"];
 
-// Définition de la structure d'une page Html
+/**
+ *  Définition de la structure d'une page Html
+ */
 class Page {
     public $title;
     public $description;
@@ -21,15 +25,19 @@ class Page {
 // Routage
 switch ($requestURI) {
     case "/":
+        // Définition des informations de la page
+        // Variables passées au template
         $page = new Page(
             "Club de tennis",
             "Site web du club de tennis",
-            "http://" . $_SERVER["HTTP_HOST"] . $requestURI,
-            "Earthloader, le club de tennis fait pour tous et toutes.");
+            "https://" . $_SERVER["HTTP_HOST"] . $requestURI,
+            "Earthloader, le club de tennis fait pour tous et toutes."
+        );
+        // Inclusion du template
         require_once "templates/indexTemplate.php";
         break;
+    // Gestion des erreurs 404
     default:
-        echo $requestURI . "<br>";
         echo ("Erreur 404 -> page non trouvée.");
         break;
 }
