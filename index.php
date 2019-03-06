@@ -34,7 +34,14 @@ switch ($requestURI) {
             "Earthloader, le club de tennis fait pour tous et toutes."
         );
         // Inclusion du template
-        require_once "templates/indexTemplate.php";
+        try {
+            if(!include_once "./templates/indexTemplate.php") {
+                throw new Exception("Template non trouvé.");
+            }
+        } catch(Exception $e) {
+            // TODO créer une fonction pour la gestion correcte des erreurs avec envoi de mail à l'admin et écriture dans un fichier de logs
+            echo "Erreur serveur : " . $e->getMessage();
+        }
         break;
     // Gestion des erreurs 404
     default:
