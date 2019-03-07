@@ -1,0 +1,90 @@
+
+/* Bloc html */
+#bloc_header {
+	width: 1500px;
+	height: 70px;
+	display: flex;
+}
+
+#bloc_session {
+	width: 1500px;
+	height: 400px;
+	background-color: white;
+
+}
+
+#bloc_section_contenu {
+	width: 1500px;
+	height: 1000px;
+	background-color: red;
+	border: solid 2px black;
+}
+
+#bloc_footer {
+	width: 1500px;
+	height: 200px;
+	background-color: yellow;
+	border: solid 2px black;
+}
+
+/* En-tête */
+
+#logo { 
+	margin-top: 3px;
+	margin-left: 50px;
+	display: flex;
+}
+
+
+#logo img{
+	width: 60px;
+	height: 60px; 
+}
+
+/* Navigation */
+
+
+nav {
+	float: right;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+}
+
+nav li {
+	transform: skewX(-10deg);
+}
+
+nav a {
+	text-decoration: none;
+	color : orange;
+	font-size: 1.2em;
+}
+
+nav ul li a {
+	display: block;
+	font-weight: bold;
+	margin-top: -10px;
+	width: 120px;
+	background-color: white;
+	border:solid 2px black;
+	color : black;
+	padding: 21px;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+
+}
+
+a:hover {
+	color: #e65c00;
+	border-color: #e65c00; 
+	border-width: 6px;
+}
+
+header {
+	display: flex;
+	flex: 1 2;
+}
