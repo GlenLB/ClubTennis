@@ -1,0 +1,40 @@
+Erreur serveur ---------- Template partials/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(3): includeHandleError('partials/headPa...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}
+Erreur serveur ---------- Template partial/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(3): includeHandleError('partial/headPar...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}
+Erreur serveur ---------- Template partials/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(4): includeHandleError('partials/headPa...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}
+Erreur serveur ---------- Template partials/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(4): includeHandleError('partials/headPa...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}
+Erreur serveur ---------- Template /templates/partials/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(4): includeHandleError('/templates/part...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}
+Erreur serveur ---------- Template ./partials/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(4): includeHandleError('./partials/head...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}
+Erreur serveur ---------- Template ./template/partials/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(3): includeHandleError('./template/part...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}
+Erreur serveur ---------- Template ./template/partials/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(3): includeHandleError('./template/part...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}
+Erreur serveur ---------- Template ./template/partials/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(3): includeHandleError('./template/part...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}
+Erreur serveur ---------- Template ./template/partials/headPartial.php non trouvé.---------#0 /home/glen/Documents/Dvt_web/tennis/templates/indexTemplate.php(3): includeHandleError('./template/part...')
+#1 /home/glen/Documents/Dvt_web/tennis/logic/main.php(14): include_once('/home/glen/Docu...')
+#2 /home/glen/Documents/Dvt_web/tennis/index.php(40): includeHandleError('./templates/ind...')
+#3 {main}

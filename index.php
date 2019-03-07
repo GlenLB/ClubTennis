@@ -3,6 +3,9 @@
  * Routeur
  */
 
+// Inclusion du fichier contenant des fonctions utiles à la gestion des erreurs
+require_once "./logic/main.php";
+
 // Récupération de l'URI
 $requestURI = $_SERVER["REQUEST_URI"];
 
@@ -34,14 +37,7 @@ switch ($requestURI) {
             "Earthloader, le club de tennis fait pour tous et toutes."
         );
         // Inclusion du template
-        // TODO créer une fonction d'inclusion qui gère correctement les erreurs avec envoi de mail à l'admin et écriture dans un fichier de logs
-        try {
-            if(!include_once "./templates/indexTemplate.php") {
-                throw new Exception("Template non trouvé.");
-            }
-        } catch(Exception $e) {
-            echo "Erreur serveur : " . $e->getMessage();
-        }
+        echo includeHandleError("./templates/indexTemplate.php");
         break;
     // Gestion des erreurs 404
     default:

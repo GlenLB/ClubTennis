@@ -1,6 +1,6 @@
 <?php 
 // Inclusion du head
-require_once "partials/headPartial.php"?>
+includeHandleError("./templates/partials/headPartial.php"); ?>
 <body>
 	<header id="bloc_header">
 		<div id ="logo">
@@ -26,5 +26,5 @@ require_once "partials/headPartial.php"?>
 
 	<?php 
 	// Inclusion du footer
-	require_once "partials/footerPartial.php"?>
+	includeHandleError("./templates/partials/footerPartial.php"); ?>
 	
