@@ -1,0 +1,167 @@
+
+
+header {
+	background-color: #2B4955;
+	color: #D7A124;
+
+
+}
+
+body {
+	background: url('images/background1.jpg') no-repeat center fixed;
+	background-size: cover;
+	color : #D7A124;
+	margin: center;
+
+}
+
+footer {
+	background-color: #2B4955;
+	color: #D7A124;
+}
+
+/* Page */
+
+
+#bloc_header {
+	color: #D7A124;
+	height: 120px;
+	width: 70%;
+	margin-left: auto;
+ 	margin-right: auto;
+}
+
+
+#bloc_section {
+	width: 70%;
+	height: 50%;
+	color: black;
+	background-color: red;
+	margin-left: auto;
+ 	margin-right: auto;
+}
+
+#bloc_footer {
+	color: black;
+	height: 170px;
+	width: 70%;
+	margin-left: auto;
+ 	margin-right: auto;
+}
+
+#logo h1{
+	font-family: 'Arial', cursive;
+	margin-left: 5px;
+	text-align: center;
+}
+
+
+/* En-tête */
+
+#logo { 
+	margin-top: 3px;
+	margin-left: 5px;
+	display: flex;
+	justify-content: flex-start;
+
+}
+
+#logo img{
+	width: 60px;
+	height: 60px;
+}
+
+/* Navigation */
+
+nav li {
+	list-style-type: none;
+	float: left;
+	border-radius: 10% 25%;
+	margin-top: 4px;
+}
+
+nav ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+nav {
+	width: 70%;
+	height: 65px;
+	margin-left: auto;
+ 	margin-right: auto;
+	background-color: #2B4955;
+	
+}
+
+nav a {
+	display: flex;
+	text-decoration: none;
+	padding: 20px 30px;
+	color: #D7A124;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+.table {
+	display: table;
+	margin: auto;
+}
+
+.menu_index:hover{
+	border-top: 5px solid #E5B217;
+	background-color: #BE930F;
+}
+
+.menu_formules:hover{
+	border-top: 5px solid #E5B217;
+	background-color: #BE930F;
+}
+
+.menu_club:hover{
+	border-top: 5px solid #E5B217;
+	background-color: #BE930F;
+}
+
+.menu_contact:hover{
+	border-top: 5px solid #E5B217;
+	background-color: #BE930F;
+}
+
+nav li:hover a {
+	padding: 15px 30px 20px 30px;
+	color: black;
+	cursor: pointer;
+}
+
+
+/* Corps de la page*/
+
+section p {
+	font-family: arial;
+	margin-left: 5px;
+}
+
+aside {
+	background-color: red;
+}
+
+
+#bloc_haut_gauche{
+	display: flex;
+	width: 40%;
+	height: 48%;
+	border: solid 3px black;
+	margin-left: 3px;
+}
+
+#bloc_haut_droite {
+	width: 40%;
+	height: 48%;
+	border: solid 3px black;
+	margin-left: 60%;
+	
+}
+
+
+
