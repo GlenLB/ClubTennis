@@ -6,16 +6,19 @@ include_once "./templates/partials/headPartial.php";?>
 		<!-- Image de fond -->
 		<img id="background" src="./statics/img/background_section.jpg" alt="Image de fond">
 		<!-- Arrow -->
-		<a href="#arrowTarget"><img id="fleche" src="./statics/img/fleche.png" alt="Image flèche" /></a>
+		<a id="arrow" href="#arrow">
+			<span></span>
+			<span></span>
+		</a>
 
-		<h1 id="arrowTarget">Decouverte de notre club Earthloader</h1>
-		<section id="section1">
+		<h1>Decouverte de notre club Earthloader</h1>
+		<section id="section1" class="section">
 			<img src="./statics/img/terrain_tennis_exterieur.jpg" />
 			<p>
 				Notre club de tennis, Earthloader, possède de sublimes terrains extérieurs se situant au bord de la mer. Ainsi, qu'un complexe intérieur se trouvant à 500 mètres de la plage. Cela permet ainsi de pratiquer en été comme en hiver (Et oui, même pendant les vacances !). Chaque année, de nouvelles recrues font leur apparition au sein de notre club. Cette nouvelle ère de fraicheur permet de faire agrandir notre club ainsi que notre équipe de professionnels encadrants. Si vous voulez profiter d'autres photos sur notre club ainsi que sur sa situation géographique, je vous convie à aller dans notre <a id="mot" href="galerie.html"><em>galerie</em></a>.
 			</p>
 		</section>
-		<section id="section2">
+		<section id="section2" class="section">
 			<div id="containerContactIndex">
 				<h2>Contactez-nous</h2>
 				<p>
@@ -30,11 +33,8 @@ include_once "./templates/partials/headPartial.php";?>
 					Horaires : du lundi au samedi de 9h00 à 12h00 puis de 14h30 à 19h30.
 				</p>
 			</div>
-			<div id="containerMap">
-				<i class="fas fa-map-marked-alt"></i>
-				<!-- Carte Google Maps -->
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21969.671814170397!2d-1.7974654!3d46.5039736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4804678ad779b81f%3A0x40d37521e09b240!2s85100+Les+Sables-d&#39;Olonne!5e0!3m2!1sfr!2sfr!4v1552032541414" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
+			<!-- Carte Google Maps -->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21969.671814170397!2d-1.7974654!3d46.5039736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4804678ad779b81f%3A0x40d37521e09b240!2s85100+Les+Sables-d&#39;Olonne!5e0!3m2!1sfr!2sfr!4v1552032541414" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</section>
 	</main>
 
