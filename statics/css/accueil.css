@@ -2,7 +2,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 110px;
+	margin-top: 70px;
 }
 
 h1 {
@@ -14,6 +14,12 @@ h1 {
 .fas {
 	font-size: 30px;
 	color: #e65c00;
+}
+
+/* Grande image d'accueil */
+#background {
+	width: 100%;
+	height: auto;
 }
 
 /* Arrow bas grande image */
@@ -41,7 +47,7 @@ h1 {
 	margin-top: 45px;
 }
 
-#section1 p{
+#section1 p {
 	margin-top: 180px;
 	margin-left: 30px;
 	margin-right: 20px;

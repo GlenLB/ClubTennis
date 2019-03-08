@@ -3,11 +3,12 @@
 include_once "./templates/partials/headPartial.php";?>
 
 	<main>
-		<!-- Image de fond, h1, call to action -->
+		<!-- Image de fond -->
 		<img id="background" src="./statics/img/background_section.jpg" alt="Image de fond">
-		<img id="fleche" src="./statics/img/fleche.png" alt="Image flèche" />
+		<!-- Arrow -->
+		<a href="#arrowTarget"><img id="fleche" src="./statics/img/fleche.png" alt="Image flèche" /></a>
 
-		<h1>Decouverte de notre club Earthloader</h1>
+		<h1 id="arrowTarget">Decouverte de notre club Earthloader</h1>
 		<section id="section1">
 			<img src="./statics/img/terrain_tennis_exterieur.jpg" />
 			<p>
