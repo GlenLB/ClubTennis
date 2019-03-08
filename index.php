@@ -34,10 +34,10 @@ switch ($requestURI) {
             "Club de tennis",
             "Site web du club de tennis",
             "https://" . $_SERVER["HTTP_HOST"] . $requestURI,
-            "Earthloader, le club de tennis fait pour tous et toutes."
+            "Club de tennis EarthLoader"
         );
         // Inclusion du template
-        echo includeHandleError("./templates/indexTemplate.php");
+        include_once("./templates/indexTemplate.php");
         break;
     // Gestion des erreurs 404
     default:

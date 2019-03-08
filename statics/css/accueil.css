@@ -1,0 +1,96 @@
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 110px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+}
+
+/* Icones Font Awesome */
+.fas {
+	font-size: 30px;
+	color: #e65c00;
+}
+
+/* Arrow bas grande image */
+#fleche {
+	display: block;
+	margin: auto;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+}
+
+/* SECTION 1 ------------------------------- */
+
+#section1 {
+	box-shadow: 2px 2px 2px silver;
+	display: flex;
+	justify-content: space-between;
+	width: 1500px;
+	height: 500px;
+	margin-left: 2px;
+	margin-top: 5px;
+}
+
+#section1 img:first-child {
+	margin-top: 45px;
+}
+
+#section1 p{
+	margin-top: 180px;
+	margin-left: 30px;
+	margin-right: 20px;
+	text-align: justify;
+	width: 748px;
+}
+
+/* SECTION 2 ------------------------------- */
+
+#section2 {
+	box-shadow: 2px 2px 2px silver;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+	width: 1500px;
+	height: 500px;
+}
+
+#section2 iframe {
+	margin-top: 5px;
+	width: 700px;
+	height: 450px;
+	box-shadow: 2px 2px 2px silver;
+}
+
+#containerContactIndex p{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#containerContactIndex h2 {
+	text-align: center;
+	text-decoration: underline; 
+
+}
+
+#containerMap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#mot {
+	text-decoration: none;
+	color: #e65c00;
+}
+
+#mot:hover {
+	text-decoration: underline;
+}
