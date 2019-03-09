@@ -1,10 +1,10 @@
 <?php
 // Inclusion du head
-include_once "./templates/partials/headPartial.php";?>
+include_once $rootDir . "/templates/partials/headPartial.php"; ?>
 
 	<main>
 		<!-- Image de fond -->
-		<img id="background" src="./statics/img/background_section.jpg" alt="Image de fond">
+		<img id="background" src="<?= $fullHost . '/statics/img/background_section.jpg' ?>" alt="Image de fond">
 		<!-- Arrow -->
 		<a id="arrow" href="#arrow">
 			<span></span>
@@ -13,7 +13,7 @@ include_once "./templates/partials/headPartial.php";?>
 
 		<h1>Decouverte de notre club Earthloader</h1>
 		<section id="section1" class="section">
-			<img src="./statics/img/terrain_tennis_exterieur.jpg" />
+			<img src="<?= $fullHost . '/statics/img/terrain_tennis_exterieur.jpg' ?>" />
 			<p>
 				Notre club de tennis, Earthloader, possède de sublimes terrains extérieurs se situant au bord de la mer. Ainsi, qu'un complexe intérieur se trouvant à 500 mètres de la plage. Cela permet ainsi de pratiquer en été comme en hiver (Et oui, même pendant les vacances !). Chaque année, de nouvelles recrues font leur apparition au sein de notre club. Cette nouvelle ère de fraicheur permet de faire agrandir notre club ainsi que notre équipe de professionnels encadrants. Si vous voulez profiter d'autres photos sur notre club ainsi que sur sa situation géographique, je vous convie à aller dans notre <a id="mot" href="galerie.html"><em>galerie</em></a>.
 			</p>
@@ -40,4 +40,4 @@ include_once "./templates/partials/headPartial.php";?>
 
 	<?php
 // Inclusion du footer
-include_once "./templates/partials/footerPartial.php";?>
+include_once $rootDir . "/templates/partials/footerPartial.php"; ?>

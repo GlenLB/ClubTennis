@@ -3,21 +3,24 @@
  * Routeur
  */
 
-// Inclusion du fichier contenant des fonctions utiles à la gestion des erreurs
-require_once "./logic/main.php";
-
 // Récupération de l'URI
 $requestURI = $_SERVER["REQUEST_URI"];
+// Récupération de l'adresse host
+$fullHost = "http://" . $_SERVER['HTTP_HOST'];
+// Définition du répertoire root du site web
+$rootDir = getenv("TENNISROOTDIR");
 
 /**
  *  Définition de la structure d'une page Html
  */
-class Page {
+class Page
+{
     public $title;
     public $description;
     public $canonical;
     public $h1;
-    public function __construct($title, $description, $canonical, $h1) {
+    public function __construct($title, $description, $canonical, $h1)
+    {
         $this->title = $title;
         $this->description = $description;
         $this->canonical = $canonical;
@@ -33,14 +36,14 @@ switch ($requestURI) {
         $page = new Page(
             "Club de tennis",
             "Site web du club de tennis",
-            "https://" . $_SERVER["HTTP_HOST"] . $requestURI,
+            $fullHost . $requestURI,
             "Club de tennis EarthLoader"
         );
         // Inclusion du template
-        include_once("./templates/indexTemplate.php");
+        include_once $rootDir . "/templates/indexTemplate.php";
         break;
     // Gestion des erreurs 404
     default:
-        echo ("Erreur 404 -> page non trouvée.");
+        echo "Erreur 404 -> page non trouvée.";
         break;
 }
