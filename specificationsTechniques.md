@@ -3,9 +3,9 @@
 ## Spécifications techniques :
 
 ### Variables d'environnement :
-La variable d'environnement *TENNISROOTDIR* doit être définie à la racine du dossier contenant le site.
-Pour cela, ajouter la variable au fichier "/etc/apache2/envvars" : export TENNISROOTDIR=cheminversledossier.
-**Essayer de la défninir dans le .htaccess pour prod**
+La variable d'environnement *TENNISROOTDIR* doit être définie, et doit contenir le chemin menant à la racine du dossier contenant le site.
+Pour cela, ajouter cette variable au fichier "/etc/apache2/envvars" : export TENNISROOTDIR=cheminversledossier.
+**Essayer de la définir dans le .htaccess pour prod**
 
 ### Partie client :
 * Variables CSS
