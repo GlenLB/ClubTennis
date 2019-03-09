@@ -2,3 +2,6 @@
 @import url("./header.css");
 /* Import fichier CSS page d'accueil */
 @import url("./accueil.css");
+/* Import fichier CSS footer */
+@import url("./footer.css");
+
