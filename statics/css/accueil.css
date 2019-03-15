@@ -20,20 +20,46 @@ main {
 /* Grande image d'accueil */
 #background {
 	width: 100%;
-	height: auto;
+	background: no-repeat center url("/statics/img/background_section.jpg");
+	background-size: cover;
+}
+
+/* Buttons */
+.btn {
+	display: block;
+	text-decoration: none;
+	background: linear-gradient(#cbf76c, var(--btnColor));
+	padding: 20px;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	box-shadow: 0 0 4px grey inset;
+}
+.btn:hover {
+	background: linear-gradient(var(--btnColor), #cbf76c);
+}
+
+/* Button inscription */
+#btnInscription {
+	position: absolute;
+	margin: auto;
+	padding: 30px;
+	border-radius: 100px;
 }
 
 /* Arrow en bas de la grande image */
 #arrow {
 	display: flex;
+	position: absolute;
+	bottom: 10px;
+	justify-content: center;
 	align-items: center;
-	margin: auto;
 	width: 80px;
 	height: 50px;
 	animation: .7s alternate infinite animArrow;
-	position: relative;
-	margin-top: -25px;
 	outline: none;
+	margin: auto;
+	z-index: 10;
 }
 #arrow span {
 	width: 48px;
@@ -56,10 +82,10 @@ main {
 /* Animation Arrow */
 @keyframes animArrow {
 	from {
-		top: 0px;
+		bottom: 10px;
 	}
 	to {
-		top: 5px;
+		bottom: 15px;
 	}
 }
 
@@ -120,6 +146,7 @@ h1 {
 }
 #containerContactIndex {
 	text-align: center;
+	margin: auto;
 }
 #containerContactIndex p {
 	display: flex;

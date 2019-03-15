@@ -4,7 +4,9 @@ include_once $rootDir . "/templates/partials/headPartial.php"; ?>
 
 	<main>
 		<!-- Image de fond -->
-		<img id="background" src="<?= $fullHost . '/statics/img/background_section.jpg' ?>" alt="Image de fond">
+		<div id="background"></div>
+		<!-- Button inscription -->
+		<a id="btnInscription" class="btn" href="/inscription">S'INSCRIRE AU CLUB</a>
 		<!-- Arrow -->
 		<a id="arrow" href="#arrow">
 			<span></span>

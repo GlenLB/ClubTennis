@@ -4,12 +4,16 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 	scroll-behavior: smooth;
 }
+body {
+	/* Pour un chargement de la page propre */
+	opacity: 0;
+}
 
 /* DÉFINITION VARIABLES ------------------------------- */
 
 body {
 	--mainColor: #db550b;
-	--btnColor: yellowgreen;
+	--btnColor: #9acd32;
 }
 
 /* NAVBAR ------------------------------- */

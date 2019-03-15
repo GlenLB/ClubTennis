@@ -1,6 +1,24 @@
 footer {
-    border-top: 5px dotted var(--btnColor);
-    width: 100%;
-    height: 500px;
-    margin-top: 100px;
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: bold;
+	display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+	width: 100%;
+	min-height: 100px;
+    text-align: center;
+	margin-top: 70px;
+}
+footer .fab {
+    padding-right: 10px;
+    font-size: 40px;
+}
+
+@media(max-width: 800px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
