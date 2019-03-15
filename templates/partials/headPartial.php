@@ -28,7 +28,8 @@
         <div id="liensNavMobile" class="liensNavMobileHidden">
             <a href="">INSCRIPTION AU CLUB</a><br>
             <a href="">LE CLUB</a><br>
-            <a href="">CONTACT</a>
+            <a href="">CONTACT</a><br>
+            <i id="userIconMobile" class="far fa-user userIcon"></i>
         </div>
         <!-- Navigation -->
         <nav>
@@ -44,4 +45,5 @@
                 <a href="">CONTACT</a>
             </div>
         </nav>
+        <i id="userIcon" class="far fa-user userIcon"></i>
     </header>

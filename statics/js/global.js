@@ -55,3 +55,7 @@ btnInscription.style.top = (window.innerHeight / 2 - btnInscription.clientHeight
 document.body.style.opacity = 1;
 
 }
+
+
+// ICON USER CONNEXION -----------------------------------------------
+
