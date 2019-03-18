@@ -47,3 +47,13 @@
         </nav>
         <i id="userIcon" class="far fa-user userIcon"></i>
     </header>
+    <!-- Modal connexion -->
+    <div id="modalConnect">
+        <form>
+            <i>X</i>
+            <h3>Connexion</h3>
+            <input type="text" id="" placeholder="email">
+            <input type="password" id="" placeholder="mot de passe">
+            <a href="#" class="btn">CONNEXION</a>
+        </form>
+    </div>

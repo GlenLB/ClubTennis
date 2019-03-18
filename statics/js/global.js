@@ -44,18 +44,26 @@ window.onload = () => {
     main.onclick = handleHamburgerMain
 
 
-// IMAGE BACKGROUND ET BUTTON INSCRIPTION ---------------------------
+    // IMAGE BACKGROUND ET BUTTON INSCRIPTION ---------------------------
 
-const imgBackground = document.querySelector("#background");
-const btnInscription = document.querySelector("#btnInscription");
-imgBackground.style.height = (window.innerHeight - 70) + "px";
-btnInscription.style.top = (window.innerHeight / 2 - btnInscription.clientHeight / 2) + "px";
+    const imgBackground = document.querySelector("#background");
+    const btnInscription = document.querySelector("#btnInscription");
+    imgBackground.style.height = (window.innerHeight - 70) + "px";
+    btnInscription.style.top = (window.innerHeight / 2 - btnInscription.clientHeight / 2) + "px";
 
-/* Pour un chargement de la page propre */
-document.body.style.opacity = 1;
+    /* Pour un chargement de la page propre */
+    document.body.style.opacity = 1;
+
+
+    // ICON USER CONNEXION -----------------------------------------------
+
+    const userIcons = document.querySelectorAll(".userIcon");
+    userIcons.onclick = handleUserIconClick
+    /**
+     * Handler pour le clic sur l'icone de connexion
+     */
+    function handleUserIconClick() {
+        
+    }
 
 }
-
-
-// ICON USER CONNEXION -----------------------------------------------
-

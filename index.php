@@ -9,6 +9,8 @@ $requestURI = $_SERVER["REQUEST_URI"];
 $fullHost = "http://" . $_SERVER['HTTP_HOST'];
 // Définition du répertoire root du site web
 $rootDir = getenv("TENNISROOTDIR");
+// À supprimer pour la production
+$prefixWamp = "/site_dsbpw/ClubTennis/";
 
 /**
  *  Définition de la structure d'une page Html
@@ -30,7 +32,7 @@ class Page
 
 // Routage
 switch ($requestURI) {
-    case "/":
+    case "/" || $prefixWamp:
         // Définition des informations de la page
         // Variables passées au template
         $page = new Page(
