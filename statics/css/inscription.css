@@ -1,4 +1,11 @@
-/* Modal connexion */
+/* Inscription */
+#inscriptionMain>h1 {
+    margin-top: 80px;
+    /* margin-bottom: 40px; */
+}
+#inscriptionMain>h3 {
+    color: silver;
+}
 #inscriptionBox {
 	display: flex;
 	flex-direction: column;

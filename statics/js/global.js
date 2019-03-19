@@ -72,6 +72,10 @@ window.onload = () => {
     }
 
 
+    // TAILLE MINIMUM PAGE ---------------------------
+
+    document.querySelector("main").style.minHeight = window.innerHeight - 70 - 170 + "px";
+
     /* Pour un chargement de la page propre */
     document.body.style.opacity = 1;
 
