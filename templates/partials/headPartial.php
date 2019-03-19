@@ -26,7 +26,7 @@
         </span>
         <!-- Liens nav mobile -->
         <div id="liensNavMobile" class="liensNavMobileHidden">
-            <a href="">INSCRIPTION AU CLUB</a><br>
+            <a href="">INSCRIPTION</a><br>
             <a href="">LE CLUB</a><br>
             <a href="">CONTACT</a><br>
             <i id="userIconMobile" class="far fa-user userIcon"></i>
@@ -40,7 +40,7 @@
             </div>
             <!-- Liens -->
             <div id="liensNav">
-                <a href="">INSCRIPTION AU CLUB</a>
+                <a href="">INSCRIPTION</a>
                 <a href="">LE CLUB</a>
                 <a href="">CONTACT</a>
             </div>
@@ -55,7 +55,7 @@
             <h3>Connexion</h3>
             <input type="text" placeholder="email">
             <input type="password" placeholder="mot de passe">
-            <a href="#" class="btn">CONNEXION</a>
+            <a href="#" class="btn">SE CONNECTER</a>
         </form>
     </div>
     

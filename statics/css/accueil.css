@@ -52,6 +52,7 @@ main {
 	color: white;
 	font-size: 60px;
 	text-shadow: 0 0 7px black;
+	text-align: center;
 }
 /* Button inscription */
 #btnInscription {
@@ -111,10 +112,11 @@ main {
 	}
 }
 
-h1 {
+main>h2 {
 	text-align: center;
 	margin-top: 60px;
 	margin-bottom: 40px;
+	font-size: 30px;
 }
 
 /* SECTION 1 ------------------------------- */

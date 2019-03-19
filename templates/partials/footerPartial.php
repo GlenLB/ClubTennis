@@ -10,6 +10,7 @@
                 </p>
         </div>
     </footer>
-    <script defer src="./statics/js/global.js"></script>
+    <script defer type="module" src="./statics/js/global.js"></script>
+    <script defer type="module" src="./statics/js/accueil.js"></script>
 </body>
 </html>

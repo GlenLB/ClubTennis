@@ -122,6 +122,7 @@ nav h2 {
 	bottom: 0px;
 	left: 0px;
 	background-color: white;
+	padding: 10px;
 }
 #modalConnect form {
 	z-index: 109;
@@ -153,6 +154,14 @@ nav h2 {
 }
 #modalConnect input::placeholder {
 	color: silver;
+}
+@media(max-width: 550px) {
+	#modalConnect input {
+		margin-bottom: 5px;
+		padding: 5px;
+		width: 200px;
+		border: 1px solid silver;
+	}
 }
 
 /* MENU MOBILE ------------------------------- */

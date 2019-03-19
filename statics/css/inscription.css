@@ -1,0 +1,37 @@
+/* Modal connexion */
+#inscriptionBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+    padding: 10px;
+    margin: auto;
+}
+#inscriptionBox form {
+	box-shadow: 0px 0px 4px grey;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+#inscriptionBox input {
+	margin-bottom: 5px;
+	padding: 5px;
+	width: 300px;
+	border: 1px solid silver;
+}
+#inscriptionBox .btn {
+	margin-top: 10px;
+}
+#inscriptionBox input::placeholder {
+	color: silver;
+}
+@media(max-width: 550px) {
+	#inscriptionBox input {
+		margin-bottom: 5px;
+		padding: 5px;
+		width: 200px;
+		border: 1px solid silver;
+	}
+}

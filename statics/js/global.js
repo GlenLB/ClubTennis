@@ -1,3 +1,6 @@
+// Import du JS spécifique à la page d'accueil
+import * as accueil from "./accueil.js";
+
 window.onload = () => {
     // Déclaration du mode strict
     "use strict";
@@ -44,17 +47,6 @@ window.onload = () => {
     main.onclick = handleHamburgerMain
 
 
-    // IMAGE BACKGROUND && H1 && BOX ACCUEIL ---------------------------
-
-    const imgBackground = document.querySelector("#background");
-    const boxAccueil = document.querySelector("#boxAccueil");
-    imgBackground.style.height = (window.innerHeight - 70) + "px";
-    boxAccueil.style.top = (window.innerHeight / 2 - boxAccueil.clientHeight / 2) + "px";
-
-    /* Pour un chargement de la page propre */
-    document.body.style.opacity = 1;
-
-
     // ICON USER CONNEXION && MODAL CONNEXION -----------------------------------------------
 
     const userIcons = document.querySelectorAll(".userIcon");
@@ -70,6 +62,18 @@ window.onload = () => {
     function handleUserIconsAndBtnCloseClick() {
         modalConnect.style.display != "none" ? modalConnect.style.display = "none" : modalConnect.style.display = "flex";
     }
+
+
+    // IMAGE BACKGROUND && H1 && BOX ACCUEIL ---------------------------
+
+    if (location.pathname == "/") {
+        // Importé depuis le module accueil.js
+        accueil.exec();
+    }
+
+
+    /* Pour un chargement de la page propre */
+    document.body.style.opacity = 1;
 
 
 }

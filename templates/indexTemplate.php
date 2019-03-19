@@ -9,7 +9,7 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
 			<!-- H1 -->
 			<h1 id="h1Accueil">Club de tennis Earthloader<br>Sables d'Olonne</h1>
 			<!-- Button inscription -->
-			<a id="btnInscription" class="btn" href="#">S'INSCRIRE AU CLUB</a>
+			<a id="btnInscription" class="btn" href="/inscription">S'INSCRIRE AU CLUB</a>
 		</div>
 		<!-- Arrow -->
 		<a id="arrow" href="#arrow">
@@ -17,7 +17,7 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
 			<span></span>
 		</a>
 
-		<h1>Decouverte de notre club Earthloader</h1>
+		<h2>Decouverte de notre club Earthloader</h2>
 		<section id="section1" class="section">
 			<img src="<?=$fullHost . '/statics/img/terrain_tennis_exterieur.jpg'?>" />
 			<p>
