@@ -5,20 +5,35 @@ footer {
 	display: flex;
     justify-content: space-around;
     align-items: baseline;
-	width: 100%;
+	width: auto;
 	min-height: 100px;
-    text-align: center;
-	margin-top: 70px;
+    margin-top: 70px;
+    padding: 10px;
 }
+footer>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#reseauxSociaux {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/* Icones réseaux sociaux */
 footer .fab {
     padding-right: 10px;
     font-size: 40px;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1050px) {
     footer {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+    footer>div {
+        align-items: center;
     }
 }

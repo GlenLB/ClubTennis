@@ -1,10 +1,11 @@
 /* Inscription */
 #inscriptionMain>h1 {
-    margin-top: 80px;
-    /* margin-bottom: 40px; */
+	margin-top: 80px;
+	text-align: center;
 }
 #inscriptionMain>h3 {
-    color: silver;
+	color: silver;
+	text-align: center;
 }
 #inscriptionBox {
 	display: flex;
