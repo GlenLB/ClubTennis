@@ -45,7 +45,9 @@ main {
 /* Box accueil */
 #boxAccueil {
 	position: absolute;
+	padding: 5px;
 }
+/* h1 */
 #boxAccueil>h1 {
 	color: white;
 	font-size: 60px;
@@ -57,6 +59,14 @@ main {
 	padding: 30px;
 	width: 200px;
 	border-radius: 100px;
+}
+@media(max-width: 550px) {
+	/* h1 */
+	#boxAccueil>h1 {
+		color: white;
+		font-size: 40px;
+		text-shadow: 0 0 7px black;
+	}
 }
 
 /* Arrow en bas de la grande image */
