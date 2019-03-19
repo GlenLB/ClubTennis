@@ -35,8 +35,8 @@
         <nav>
             <!-- Logo -->
             <div id="logoContainer">
-                <img id="logo" src="<?= $fullHost . '/statics/img/logo.png' ?>" alt="Logo">
-                <h2 id="logoTitle">EarthLoader</h2>
+                <a href="/"><img id="logo" src="<?= $fullHost . '/statics/img/logo.png' ?>" alt="Logo"></a>
+                <a href="/"><h2 id="logoTitle">EarthLoader</h2></a>
             </div>
             <!-- Liens -->
             <div id="liensNav">

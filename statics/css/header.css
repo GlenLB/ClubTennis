@@ -41,7 +41,7 @@ nav {
 	left: -30%;
 }
 
-nav a {
+#liensNav a {
 	text-decoration: none;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -51,7 +51,7 @@ nav a {
 	transition: all .2s;
 }
 
-nav a:hover {
+#liensNav a:hover {
 	border-bottom: 2px solid var(--mainColor);
 }
 
@@ -59,7 +59,7 @@ nav a:hover {
 	max-width: 70px;
 	max-height: 60px;
 	margin-left: 10px;
-	margin-right: 5%;
+	margin-right: 20px;
 }
 
 #logoTitle {
@@ -77,6 +77,10 @@ nav h2 {
 	display: flex;
 	align-items: center;
 	padding: 5px;
+}
+#logoContainer>a {
+	text-decoration: none;
+	outline: none;
 }
 
 /* Icone connexion user */
@@ -267,7 +271,7 @@ nav h2 {
 		max-width: 50px;
 		max-height: 45px;
 		margin-left: 5px;
-		margin-right: 5%;
+		margin-right: 10px;
 	}
 	#logoTitle {
 		font-family: 'Monoton', cursive;
