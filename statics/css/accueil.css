@@ -38,12 +38,24 @@ main {
 .btn:hover {
 	background: linear-gradient(var(--btnColor), #cbf76c);
 }
+.btn:active {
+	background: var(--btnColor);
+}
 
+/* Box accueil */
+#boxAccueil {
+	position: absolute;
+}
+#boxAccueil>h1 {
+	color: white;
+	font-size: 60px;
+	text-shadow: 0 0 7px black;
+}
 /* Button inscription */
 #btnInscription {
-	position: absolute;
 	margin: auto;
 	padding: 30px;
+	width: 200px;
 	border-radius: 100px;
 }
 

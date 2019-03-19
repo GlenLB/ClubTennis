@@ -32,7 +32,7 @@ class Page
 
 // Routage
 switch ($requestURI) {
-    case "/" || $prefixWamp:
+    case "/":
         // Définition des informations de la page
         // Variables passées au template
         $page = new Page(

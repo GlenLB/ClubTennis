@@ -45,15 +45,17 @@
                 <a href="">CONTACT</a>
             </div>
         </nav>
+        <!-- Icone user pour ecrans larges -->
         <i id="userIcon" class="far fa-user userIcon"></i>
     </header>
     <!-- Modal connexion -->
     <div id="modalConnect">
         <form>
-            <i>X</i>
+            <i id="modalClose" class="fas fa-times"></i>
             <h3>Connexion</h3>
-            <input type="text" id="" placeholder="email">
-            <input type="password" id="" placeholder="mot de passe">
+            <input type="text" placeholder="email">
+            <input type="password" placeholder="mot de passe">
             <a href="#" class="btn">CONNEXION</a>
         </form>
     </div>
+    

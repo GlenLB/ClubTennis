@@ -44,26 +44,32 @@ window.onload = () => {
     main.onclick = handleHamburgerMain
 
 
-    // IMAGE BACKGROUND ET BUTTON INSCRIPTION ---------------------------
+    // IMAGE BACKGROUND && H1 && BOX ACCUEIL ---------------------------
 
     const imgBackground = document.querySelector("#background");
-    const btnInscription = document.querySelector("#btnInscription");
+    const boxAccueil = document.querySelector("#boxAccueil");
     imgBackground.style.height = (window.innerHeight - 70) + "px";
-    btnInscription.style.top = (window.innerHeight / 2 - btnInscription.clientHeight / 2) + "px";
+    boxAccueil.style.top = (window.innerHeight / 2 - boxAccueil.clientHeight / 2) + "px";
 
     /* Pour un chargement de la page propre */
     document.body.style.opacity = 1;
 
 
-    // ICON USER CONNEXION -----------------------------------------------
+    // ICON USER CONNEXION && MODAL CONNEXION -----------------------------------------------
 
     const userIcons = document.querySelectorAll(".userIcon");
-    userIcons.onclick = handleUserIconClick
+    const modalConnect = document.querySelector("#modalConnect");
+    const btnClose = document.querySelector("#modalClose");
+    userIcons.forEach((icon) => icon.onclick = handleUserIconsAndBtnCloseClick)
+    btnClose.onclick = handleUserIconsAndBtnCloseClick
+    modalConnect.style.display = "none"
     /**
-     * Handler pour le clic sur l'icone de connexion
+     * Handler pour le clic sur l'icone de connexion et le btn de fermeture de la modale
+     * de connexion
      */
-    function handleUserIconClick() {
-        
+    function handleUserIconsAndBtnCloseClick() {
+        modalConnect.style.display != "none" ? modalConnect.style.display = "none" : modalConnect.style.display = "flex";
     }
+
 
 }
