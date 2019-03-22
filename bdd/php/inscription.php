@@ -1,6 +1,7 @@
 <?php
 /**
  * Script pour inscription des utilisateurs en BDD
+ * TODO: Si l'adresse email est déjà présente dans la BDD, l'inscription ne peut se faire
  */
 
 // Définition du type MIME du fichier pour retour AJAX
@@ -11,7 +12,8 @@ header("Content-type: text/plain");
 $prenom = htmlspecialchars($_POST["prenom"]);
 $nom = htmlspecialchars($_POST["nom"]);
 $email = htmlspecialchars($_POST["email"]);
-$mdp = $_POST["mdp"]; // TODO: hash mdp
+/* Hashage du mot de passe. Faire les vérifications pour la connexion avec password_verify() */
+$mdp = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
 
 // INSERTION DES DONNEES DANS LA BDD -------------------------
 
