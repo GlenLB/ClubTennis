@@ -41,7 +41,6 @@ export function exec() {
                     // S'il y a eu une erreur lors de l'insertion, avertir l'utilisateur et afficher l'erreur en console
                     if (response !== "success") {
                         // Avertir l'utilisateur
-                        // TODO: gestion erreur => envoi d'un mail à l'admin pour le prévenir
                         msgRetour.innerHTML = "Votre inscription a échoué. Veuillez réessayer dans quelques minutes.";
                         msgRetour.classList.add("inscriptionError");
                         document.querySelector("#inscriptionMain").insertBefore(msgRetour, document.querySelector("#inscriptionBox"));
@@ -70,6 +69,7 @@ export function exec() {
  * Longueur des paramètres
  * Le mot de passe et le mot de passe de validation sont identiques
  * Param email contient un "@" et un "."
+ * TODO: vérifier l'adresse mail avec une expression régulière
  * @param {string} prenom
  * @param {string} nom 
  * @param {string} email 
