@@ -48,6 +48,9 @@ switch ($requestURI) {
         // Inclusion du template
         include_once $rootDir . "/templates/inscriptionTemplate.php";
         break;
+    case "/apiInscription":
+        include_once $rootDir . "/bdd/php/inscription.php";
+        break;
     // Gestion des erreurs 404
     default:
         echo "Erreur 404 -> page non trouvée.";

@@ -1,5 +1,6 @@
 // Import du JS spécifique à la page d'accueil
 import * as accueil from "./accueil.js";
+import * as inscription from "../../bdd/js/inscription.js";
 
 window.onload = () => {
     // Déclaration du mode strict
@@ -76,6 +77,12 @@ window.onload = () => {
 
     document.querySelector("main").style.minHeight = window.innerHeight - 2*document.querySelector("nav").clientHeight - document.querySelector("footer").clientHeight + "px";
 
+
+    // INSCRIPTION UTILISATEUR ---------------------------
+    if (location.pathname == "/inscription") {
+        // Importé depuis le module inscription.js
+        inscription.exec();
+    }
 
     /* Pour un chargement de la page propre */
     document.body.style.opacity = 1;

@@ -40,9 +40,9 @@
             </div>
             <!-- Liens -->
             <div id="liensNav">
-                <a href="">INSCRIPTION</a>
-                <a href="">LE CLUB</a>
-                <a href="">CONTACT</a>
+                <a href="/inscription">INSCRIPTION</a>
+                <a href="#">LE CLUB</a>
+                <a href="#">CONTACT</a>
             </div>
         </nav>
         <!-- Icone user pour ecrans larges -->

@@ -10,11 +10,11 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
         <div id="inscriptionBox">
             <form>
                 <h3>Inscription</h3>
-                <input type="text" placeholder="*prenom">
-                <input type="text" placeholder="*nom">
-                <input type="text" placeholder="*email">
-                <input type="password" placeholder="*mot de passe">
-                <input type="password" placeholder="*confirmation mot de passe">
+                <input id="inscriptionPrenom" type="text" placeholder="*prenom">
+                <input id="inscriptionnom" type="text" placeholder="*nom">
+                <input id="inscriptionEmail" type="text" placeholder="*email">
+                <input id="inscriptionMdp" type="password" placeholder="*mot de passe">
+                <input id="inscriptionMdpConfirm" type="password" placeholder="*confirmation mot de passe">
                 <a href="#" class="btn">S'INSCRIRE</a>
             </form>
         </div>

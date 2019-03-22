@@ -50,9 +50,10 @@ main {
 /* h1 */
 #boxAccueil>h1 {
 	color: white;
-	font-size: 60px;
+	font-size: 50px;
 	text-shadow: 0 0 7px black;
 	text-align: center;
+	text-transform: uppercase;
 }
 /* Button inscription */
 #btnInscription {
