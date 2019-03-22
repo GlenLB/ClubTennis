@@ -1,5 +1,14 @@
+/**
+ * Éxécute l'inscription de l'utilisateur dans la base de données du club de tennis.
+ * Requête asynchrone AJAX.
+ */
 export function exec() {
     const btnInscription = document.querySelector("#inscriptionBox>form>a");
+    /* Utilisé pour donner un retour visuel à l'utilisateur sur le succès ou non de son inscription */
+    const msgRetour = document.createElement("div");
+    msgRetour.classList.add("inscriptionRetour");
+
+    /* Lors du clic sur le btn d'inscription */
     btnInscription.onclick = () => {
         /* Récupération des données du formulaire */
         const dataForm = document.querySelectorAll("#inscriptionBox>form input");
@@ -11,13 +20,14 @@ export function exec() {
         const isValid = validationForm(prenom, nom, email, mdp, mdpConfirm)
         // Si les données ne sont pas valides, avertir l'utilisateur
         if (isValid != "true") {
-            // TODO:
-            console.log("pas valide");
-            console.log(isValid);
+            msgRetour.innerHTML = "Merci de remplir correctement tous les champs du formulaire.";
+            msgRetour.classList.add("inscriptionError");
+            document.querySelector("#inscriptionMain").insertBefore(msgRetour, document.querySelector("#inscriptionBox"));
+            console.log("Données saisies par l'utilisateur non valides");
         }
         // Les données sont valides, envoi des données au serveur via AJAX
         else {
-            console.log("valide");
+            console.log("Données saisies par l'utilisateur valides");
             const request = new XMLHttpRequest();
             const url = window.location.protocol + "//" + window.location.hostname + "/apiInscription";
             console.log(url);
@@ -30,12 +40,19 @@ export function exec() {
                     const response = request.responseText;
                     // S'il y a eu une erreur lors de l'insertion, avertir l'utilisateur et afficher l'erreur en console
                     if (response !== "success") {
-                        // TODO: avertir l'utilisateur
+                        // Avertir l'utilisateur
+                        // TODO: gestion erreur => envoi d'un mail à l'admin pour le prévenir
+                        msgRetour.innerHTML = "Votre inscription a échoué. Veuillez réessayer dans quelques minutes.";
+                        msgRetour.classList.add("inscriptionError");
+                        document.querySelector("#inscriptionMain").insertBefore(msgRetour, document.querySelector("#inscriptionBox"));
                         console.log("Insertion non réussie");
                         console.log(response);
                     } else {
                         // Insertion réussie, avertir l'utilisateur
-                        // TODO: avertir l'utilisateur
+                        // Avertir l'utilisateur
+                        msgRetour.innerHTML = "Merci de votre inscription au club de tennis EarthLoader.";
+                        msgRetour.classList.add("inscriptionSuccess");
+                        document.body.insertBefore(msgRetour, document.querySelector("#inscriptionMain"));
                         console.log("insertion ok");
                         console.log(response);
                     }
@@ -47,6 +64,18 @@ export function exec() {
     }
 }
 
+/**
+ * Vérifie que les données saisies par l'utilisateur sont correctes.
+ * Vérifications effectuées :
+ * Longueur des paramètres
+ * Le mot de passe et le mot de passe de validation sont identiques
+ * Param email contient un "@" et un "."
+ * @param {string} prenom
+ * @param {string} nom 
+ * @param {string} email 
+ * @param {string} mdp 
+ * @param {string} mdpConfirm 
+ */
 function validationForm(prenom, nom, email, mdp, mdpConfirm) {
     // Vérification des longueurs de chaînes
     if (prenom.length < 3) return "Le prenom doit faire plus de 2 caractères.";
