@@ -10,36 +10,40 @@ export function exec() {
         const mdpConfirm = dataForm[4].value;
         const isValid = validationForm(prenom, nom, email, mdp, mdpConfirm)
         // Si les données ne sont pas valides, avertir l'utilisateur
-        if(isValid != "true") {
+        if (isValid != "true") {
             // TODO:
             console.log("pas valide");
             console.log(isValid);
-        } else {
+        }
+        // Les données sont valides, envoi des données au serveur via AJAX
+        else {
             console.log("valide");
-            // Les données sont valides, envoi des données au serveur via AJAX
             const request = new XMLHttpRequest();
             const url = window.location.protocol + "//" + window.location.hostname + "/apiInscription";
             console.log(url);
             request.open("POST", url);
-            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             request.onreadystatechange = () => {
                 // La requête est terminée
-                if(request.readyState == XMLHttpRequest.DONE) {
+                if (request.readyState == XMLHttpRequest.DONE) {
+                    console.log("AJAX terminé")
                     const response = request.responseText;
                     // S'il y a eu une erreur lors de l'insertion, avertir l'utilisateur et afficher l'erreur en console
-                    if(response !== "success") {
+                    if (response !== "success") {
                         // TODO: avertir l'utilisateur
+                        console.log("Insertion non réussie");
                         console.log(response);
                     } else {
                         // Insertion réussie, avertir l'utilisateur
                         // TODO: avertir l'utilisateur
                         console.log("insertion ok");
+                        console.log(response);
                     }
                 }
             }
-            request.send(`prenom=${prenom}&nom=${nom}&email=${email}&mdp=${mdp}`);
+            const requestParams = `prenom=${prenom}&nom=${nom}&email=${email}&mdp=${mdp}`;
+            request.send(requestParams);
         }
-        console.log(prenom, nom, email, mdp, mdpConfirm);
     }
 }
 
@@ -50,9 +54,9 @@ function validationForm(prenom, nom, email, mdp, mdpConfirm) {
     if (email.length < 3) return "L'email doit faire plus de 2 caractères.";
     if (mdp.length < 5) return "Le mot de passe doit faire plus de 4 caractères.";
     // Vérification que le mdp == mdpConfirm
-    if(mdp !== mdpConfirm) return "Le mot de passe et le mot de passe de confirmation ne sont pas égaux.";
+    if (mdp !== mdpConfirm) return "Le mot de passe et le mot de passe de confirmation ne sont pas égaux.";
     // Vérification que l'email contient un @ et un .
-    if(!(email.indexOf("@") !== -1 && email.indexOf(".") !== -1)) {
+    if (!(email.indexOf("@") !== -1 && email.indexOf(".") !== -1)) {
         return "Veuillez saisir une adresse email valide."
     }
     return "true";

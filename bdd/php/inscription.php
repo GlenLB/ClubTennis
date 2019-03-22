@@ -17,26 +17,30 @@ $mdp = $_POST["mdp"]; // TODO: hash mdp
 
 // Informations de connexion
 $user = "glen";
-$pass = "****";
-try {
+$pass = getenv("MYSQL_PASS");
 
+try {
     // Ouverture de la connexion
-    $bdd = new PDO('mysql:host=localhost;dbname=CLUBTENNIS', $user, $pass);
+    $bdd = new PDO("mysql:host=localhost;dbname=CLUBTENNIS", $user, $pass);
     // Préparation de l'insertion
-    $req = $dbh->prepare("INSERT INTO ABONNE(PRENOM, NOM, EMAIL, MDP) VALUES (?, ?, ?, ?)");
+    $req = $bdd->prepare("INSERT INTO ABONNE(PRENOM_ABONNE, NOM_ABONNE, EMAIL_ABONNE, MDP_ABONNE) VALUES (?, ?, ?, ?)");
     $req->bindParam(1, $prenom);
     $req->bindParam(2, $nom);
     $req->bindParam(3, $email);
     $req->bindParam(4, $mdp);
     // Execution de l'insertion
     $req->execute();
-    // TODO: rendre success selon résultat de req
-    echo "success";
+    if($req) {
+        echo "success";
+    } else {
+        echo "Insertion non réussie";
+    }
 
-} catch (PDOException $e) {
-    echo "Erreur : " . $e->getMessage() . "<br/>";
-    die();
+} catch (Exception $e) {
+    echo "Erreur : " . $e->getMessage();
+    //die();
 } finally {
     // Fermeture de la connexion
+    $req = null;
     $bdd = null;
 }

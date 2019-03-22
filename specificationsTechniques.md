@@ -3,9 +3,11 @@
 ## Spécifications techniques :
 
 ### Variables d'environnement :
-La variable d'environnement *TENNISROOTDIR* doit être définie, et doit contenir le chemin menant à la racine du dossier contenant le site.
-Pour cela, ajouter cette variable au fichier "/etc/apache2/envvars" : export TENNISROOTDIR=cheminversledossier.
-**Essayer de la définir dans le .htaccess pour prod**
+La variable d'environnement *TENNISROOTDIR* doit être définie, et doit stocker le chemin menant à la racine du dossier contenant le site.
+La variable d'environnement *MYSQL_PASS* doit être définie, et doit stocker le mot de passe de la base de données.
+Pour cela, ajouter ces variables d'environnement au fichier "/etc/apache2/envvars" : 
+export TENNISROOTDIR=cheminVersLeDossier
+export MYSQL_PASS=saisirMotDePasse.
 
 ### Partie client :
 * Variables CSS
