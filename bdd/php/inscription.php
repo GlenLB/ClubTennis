@@ -8,9 +8,9 @@ header("Content-type: text/plain");
 
 // RÉCUPÉRATION DES INFORMATIONS DE L'UTILISATEUR -----------------------
 
-$prenom = $_POST["prenom"];
-$nom = $_POST["nom"];
-$email = $_POST["email"];
+$prenom = htmlspecialchars($_POST["prenom"]);
+$nom = htmlspecialchars($_POST["nom"]);
+$email = htmlspecialchars($_POST["email"]);
 $mdp = $_POST["mdp"]; // TODO: hash mdp
 
 // INSERTION DES DONNEES DANS LA BDD -------------------------

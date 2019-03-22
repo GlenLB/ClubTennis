@@ -20,7 +20,7 @@ export function exec() {
         const isValid = validationForm(prenom, nom, email, mdp, mdpConfirm)
         // Si les données ne sont pas valides, avertir l'utilisateur
         if (isValid != "true") {
-            msgRetour.innerHTML = "Merci de remplir correctement tous les champs du formulaire.";
+            msgRetour.innerHTML = isValid;
             msgRetour.classList.add("inscriptionError");
             document.querySelector("#inscriptionMain").insertBefore(msgRetour, document.querySelector("#inscriptionBox"));
             console.log("Données saisies par l'utilisateur non valides");
@@ -51,7 +51,8 @@ export function exec() {
                         // Avertir l'utilisateur
                         msgRetour.innerHTML = "Merci de votre inscription au club de tennis EarthLoader.";
                         msgRetour.classList.add("inscriptionSuccess");
-                        document.body.insertBefore(msgRetour, document.querySelector("#inscriptionMain"));
+                        msgRetour.classList.remove("inscriptionError");
+                        document.querySelector("#inscriptionMain").insertBefore(msgRetour, document.querySelector("#inscriptionBox"));
                         console.log("insertion ok");
                         console.log(response);
                     }
@@ -88,5 +89,12 @@ function validationForm(prenom, nom, email, mdp, mdpConfirm) {
     if (!(email.indexOf("@") !== -1 && email.indexOf(".") !== -1)) {
         return "Veuillez saisir une adresse email valide."
     }
+    // Vérification que les chaînes ne contiennent pas d'élément <script></script>
+    const arrayParams = [prenom, nom, email, mdp, mdpConfirm];
+    arrayParams.forEach(param => {
+        if (param.indexOf("<script>") !== -1 || param.indexOf("</script>") !== -1) {
+            return "Veuillez ne pas insérer de JavaScript."
+        }
+    });
     return "true";
 }
