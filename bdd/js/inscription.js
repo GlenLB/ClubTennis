@@ -70,6 +70,7 @@ export function exec() {
  * Longueur des paramètres
  * Le mot de passe et le mot de passe de validation sont identiques
  * Param email contient un "@" et un "."
+ * Les chaînes de caractères ne contiennent pas d'élément <script></script>
  * TODO: vérifier l'adresse mail avec une expression régulière
  * @param {string} prenom
  * @param {string} nom 
