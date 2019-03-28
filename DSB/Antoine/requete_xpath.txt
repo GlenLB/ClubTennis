@@ -1,0 +1,1 @@
+/mon_club//abonne[@id='24']/@prenom

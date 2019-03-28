@@ -1,0 +1,133 @@
+
+<!-- Classe Club -->
+
+<!ELEMENT Club EMPTY>
+<!ATTLIST Club
+id_club ID #REQUIRED
+nom CDATA #REQUIRED
+horaires CDATA #REQUIRED
+tel CDATA #REQUIRED
+email CDATA #REQUIRED
+adresse CDATA #REQUIRED>
+<!ELEMENT liste_club(Club*)>
+
+<!-- Terrain -->
+
+<!ELEMENT Terrain EMPTY>
+<!ATTLIST Terrain
+id_terrain ID #REQUIRED
+couvert (0|1) "0"
+type (TB|G|S) "S"
+id_club IDREF #REQUIRED>
+<!ELEMENT liste_terrain(Terrain*)>
+
+<!-- Entraineur -->
+
+<!ELEMENT Entraineur EMPTY>
+<!ATTLIST Entraineur
+id_entraineur ID #REQUIRED
+prenom CDATA #REQUIRED
+nom CDATA #REQUIRED
+description CDATA #REQUIRED>
+<!ELEMENT liste_entraineur(Entraineur*)>
+
+<!-- Entrainement -->
+
+<!ELEMENT Entrainement EMPTY>
+<!ATTLIST Entrainement
+id_entrainement ID #REQUIRED
+heure_debut CDATA #REQUIRED
+heure_fin CDATA #REQUIRED
+niveau (D|I|A) "D"
+id_club IDREF #REQUIRED>
+<!ELEMENT liste_entrainement(Entrainement*)
+
+<!-- Classe Abonne -->
+
+<!ELEMENT Abonne (Abonne?)>
+<!ATTLIST Abonne
+id_abonne ID #REQUIRED
+prenom CDATA #REQUIRED
+nom CDATA #REQUIRED
+pseudo CDATA #REQUIRED
+email CDATA #REQUIRED
+reduction (0|1) "0"
+description CDATA #REQUIRED
+niveau (D|I|A) "D"
+mdp CDATA #REQUIRED
+id_club IDREF #REQUIRED
+id_entrainement IDREF #REQUIRED>
+<!ELEMENT liste_abonne(Abonne*)>
+
+<!-- Classe Match -->
+
+<!ELEMENT Match_Tennis EMPTY>
+<!ATTLIST Match_Tennis
+id_match ID #REQUIRED
+heure_debut CDATA #REQUIRED
+heure_fin CDATA #REQUIRED
+competition (0|1) "0"
+id_club IDREF #REQUIRED
+id_terrain IDREF #REQUIRED>
+<!ELEMENT liste_match(Match*)>
+
+<!-- Classe Avatar -->
+
+<!ELEMENT Avatar EMPTY>
+<!ATTLIST Avatar
+id_avatar ID #REQUIRED
+filename CDATA #REQUIRED
+id_abonne IDREF #REQUIRED>
+<!ELEMENT liste_avatar(Avatar*)>
+<!-- Classe Image -->
+
+<!ELEMENT Image EMPTY>
+<!ATTLIST Image
+id_image ID #REQUIRED
+fileName CDATA #REQUIRED>
+<!ELEMENT liste_image(Image*)>
+
+<--                     Relations                   -->
+
+<!-- Classe Abonne Perd Match -->
+
+<!ELEMENT Abonne_Perd_Match EMPTY>
+<!ATTLIST Abonne_Perd_Match
+id_abonne IDREF #REQUIRED
+id_match IDREF #REQUIRED>
+<!ELEMENT liste_Abonne_Perd_Match(Abonne_Perd_Match*)>
+
+<!-- Classe Abonne Gagne Match -->
+
+<!ELEMENT Abonne_Gagne_Match EMPTY>
+<!ATTLIST Abonne_Gagne_Match
+id_abonne IDREF #REQUIRED
+id_match IDREF #REQUIRED>
+<!ELEMENT liste_Abonne_Gagne_Match(Abonne_Gagne_Match*)>
+
+<!-- Classe Entrainement a lieu sur terrain -->
+
+<!ELEMENT Entrainement_sur_terrain EMPTY>
+<!ATTLIST Entrainement_sur_terrain
+id_terrain IDREF #REQUIRED
+id_entrainement IDREF #REQUIRED>
+<!ELEMENT liste_Entrainement_sur_terrain(Entrainement_sur_terrain*)>
+
+<!-- Classe Entrainement à Entraineur -->
+
+<!ELEMENT Entrainement_a_entraineur EMPTY>
+<!ATTLIST Entrainement_a_entraineur
+id_entrainement IDREF #REQUIRED
+id_entraineur IDREF #REQUIRED>
+<!ELEMENT liste_Entrainement_a_entraineur(Entrainement_a_entraineur*)>
+
+<!-- Classe Entraineur travaille pour club -->
+
+<!ELEMENT Entraineur_travaille_club EMPTY>
+<!ATTLIST Entraineur_travaille_club
+id_entraineur IDREF #REQUIRED
+id_club IDREF #REQUIRED>
+<!ELEMENT liste_Entraineur_travaille_club(Entraineur_travaille_club*)>
+
+<!-- Club -->
+<!ELEMENT mon_club(liste_abonne, liste_entraineur, liste_entrainement, liste_match, liste_ terrain, liste_avatar, liste_image, liste_Abonne_Perd_Match, liste_Abonne_Gagne_Match, liste_Entrainement_sur_terrain, liste_Entrainement_a_entraineur, liste_Entraineur_travaille_club)>

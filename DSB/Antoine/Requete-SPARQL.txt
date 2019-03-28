@@ -1,0 +1,5 @@
+SELECT ?tennis ?resume WHERE {
+?tennis a <http://dbpedia.org/ontology/Sport> .
+?tennis rdfs:comment ?resume
+FILTER regex(?tennis, "Tennis")
+}

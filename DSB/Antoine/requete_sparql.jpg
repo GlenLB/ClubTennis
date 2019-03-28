@@ -1,0 +1,76 @@
+<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+ <head>
+  <variable name="tennis"/>
+  <variable name="resume"/>
+ </head>
+ <results distinct="false" ordered="true">
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="ar">كرة المضرب (أو التنس الأرضي في الترجمات الحرفية) نوع من رياضات الراح والتي يتبارى فيها لاعبان في مباريات الفردي، أو فريقان مكونان من لاعبين في مباريات الزوجي. كلٌ يحمل مضربا ليستخدمه في ضرب كرة فوق الشبكة لمنطقة الخصم. وعدد الضربات ليس محددا، إنما النتيجة تحدد الرابح.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="de">Tennis ist ein Rückschlagspiel, das von zwei oder vier Spielern gespielt wird. Spielt ein Spieler gegen einen anderen, so wird dies Einzel genannt, spielen je zwei Spieler gegeneinander, wird dies Doppel genannt, wobei je nach Zusammensetzung vom Herrendoppel (zwei Männer), Damendoppel (zwei Frauen) oder gemischten Doppel (Mixed) die Rede ist. Dieser früher in Deutschland als elitär geltende Sport hat heute auch als Breitensport eine herausragende Bedeutung erlangt. Seit 1988 ist Tennis wieder Bestandteil der Olympischen Sommerspiele.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="es">El tenis es un deporte de raqueta que se practica sobre una pista de tenis rectangular (compuesta por distintas superficies las cuales pueden ser cemento, tierra, o césped), delimitada por líneas y dividida por una red.Se disputa entre dos jugadores (individuales) o entre dos parejas (dobles). El objetivo del juego es lanzar una pelota golpeándola con la raqueta de modo que rebote dentro del campo del rival procurando que este no pueda devolverla.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="ja">テニス（英: tennis）は二人または二組のプレイヤーがネット越しにラケットでボールを打ち合う球技である。オリンピックやパラリンピックで採用されている競技であり、年齢性別、身体的個性を問わず広く親しまれている。</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="pl">Tenis, tenis ziemny – dyscyplina sportowa rozgrywana na korcie tenisowym, polegająca na przebijaniu rakietą tenisową piłki ponad lub obok siatki na pole przeciwnika. Może być rozgrywana pojedynczo (tzw. singel) lub w dwuosobowych zespołach zawodników jednej płci (debel) lub obu (mikst). Tenis należał do grona letnich dyscyplin olimpijskich w latach 1896–1924. Do ich programu powrócił w 1988.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="zh">网球是一项体育运动，常见的有一对一的单打和二对二的双打，对抗双方隔着球网，用球拍将橡胶製空心球击打至对方场地中，目标是令对方无法将球按规则击回。 网球现在是一项奥运会比赛项目，适合社会各阶层与年龄段人群。现代網球起源于英格兰伯明翰的“草地网球”。1890年，网球比赛规则定型，至今调整不多，仅有的修改包括规定发球者的位置和引入“平分规定”。近来网球大赛引进了电子监控系统和球员挑战规则，使球员有机会用技术手段确定球是否出界。 网球比赛的观众数目众多，四大满贯赛事特别受到关注，包括澳网（硬地）、温网（草地）、法网（红土）和美网（硬地）。</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="en">Tennis is a racket sport that can be played individually against a single opponent (singles) or between two teams of two players each (doubles). Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent&#39;s court. The object of the game is to play the ball in such a way that the opponent is not able to play a valid return. The player who is unable to return the ball will not gain a point, while the opposite player will.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="it">Il tennis è uno sport che vede opposti due giocatori (uno contro uno, incontro singolare) o quattro (due contro due, incontro di doppio) in un campo diviso in due metà da una rete alta circa un metro dal terreno. I giocatori utilizzano una racchetta, come se fosse il prolungamento del braccio, al fine di colpire una palla. In passato le racchette avevano un telaio in legno, successivamente in leghe leggere, ora in grafite pura o mista a kevlar, fibra di vetro, tungsteno o basalto, con una corda monofilamento o multifilamento congiunta in diversi punti del telaio in modo da formare una rete.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="nl">Tennis is een balsport voor twee spelers (enkelspel) of paren (dubbelspel), waarbij een bal van gemiddeld 67 mm diameter (meestal geel met witte lijn) met een racket over een net gespeeld moet worden. Tennis werd in de late middeleeuwen al door de elite gespeeld. In zijn hedendaagse vorm stamt het uit Frankrijk en wordt het gespeeld sinds 1873. De naam is afgeleid van het Franse woord &quot;tenez!&quot; – in het Nederlands: &quot;pak aan!! (de bal)!&quot;.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="fr">Le tennis est un sport de raquette qui oppose soit deux joueurs (on parle alors de jeu en simple) soit quatre joueurs qui forment deux équipes de deux (on parle alors de jeu en double). Les joueurs utilisent une raquette cordée verticalement et horizontalement à une tension variant avec la puissance ou l&#39;effet que l&#39;on veut obtenir. Le nombre de sets (ou manches) nécessaires pour gagner un match varie selon plusieurs critères (comme le sexe, l&#39;âge ou le tournoi). Les limites du terrain et certaines règles sont différentes pour les matchs de simple et de double.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="pt">Ténis (português europeu) ou tênis (português brasileiro) é um esporte de origem inglesa, disputado em quadras geralmente abertas e de superfícies sintéticas, cimento, saibro ou relva. Participam no jogo dois oponentes ou duas duplas de oponentes, podendo ser mistas (homens e mulheres) ou não. A quadra é dividida em duas meia-quadras por uma rede, e o objetivo do jogo é rebater uma pequena bola para além da rede (para a meia-quadra adversária) com ajuda de uma raquete.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis</uri></binding>
+   <binding name="resume"><literal xml:lang="ru">Те́ннис, или большой теннис — вид спорта, в котором соперничают либо два игрока («одиночная игра»), либо две команды, состоящие из двух игроков («парная игра»). Задачей соперников (теннисистов или теннисисток) является при помощи ракеток отправлять мяч на сторону соперника так, чтобы тот не смог его отразить, не более чем после первого падения мяча на игровом поле на половине соперника.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis_in_Italy</uri></binding>
+   <binding name="resume"><literal xml:lang="en">Tennis in Italy is the 6th sport, with 1,298,000 persons, by number of practitioners.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/NCAA_Soft_Tennis_Championship_(Philippines)</uri></binding>
+   <binding name="resume"><literal xml:lang="en">The NCAA soft tennis championship is a demonstration sport that was introduced in its 2009-10 season. This is exclusive to women.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis_polo</uri></binding>
+   <binding name="resume"><literal xml:lang="it">Il tennis polo o toccer è uno sport di squadra praticato con racchetta e palla simili a quelli da tennis. Questa disciplina atletica fu ideata dallo statunitense Ron Bronson nel 2002. Nel 2004 fu regolamentata una variante di questo sport chiamata viperball che si pratica in ambienti chiusi ossia indoor in inglese.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis_polo</uri></binding>
+   <binding name="resume"><literal xml:lang="en">Tennis polo (or toccer) is a field sport where two teams of ten players (nine field players and one goalkeeper) use a tennis ball to score goals by throwing the ball into a goal defended by a keeper who holds a racquet. Tennis polo shares elements of sports such as field handball, the Gaelic sport of hurling and football. The game may also be played where all field players have racquets including the goalkeeper. Adapted to be a fast-paced sport with little stoppage of play, players advance the ball by throwing or kicking within the field of play.</literal></binding>
+  </result>
+  <result>
+   <binding name="tennis"><uri>http://dbpedia.org/resource/Tennis_in_Scotland</uri></binding>
+   <binding name="resume"><literal xml:lang="en">Tennis in Scotland was introduced from France in the Middle Ages. During the 20th century it was a minor sport, but has obtained some prominence due to the successes of Andy Murray and other Scots. While tennis courts are not uncommon, the country&#39;s oceanic climate has made it historically quite hard for Scottish players to develop. The only tennis inductee into the Scottish Sports Hall of Fame is Winnie Shaw. However, since 2008, Tennis Scotland&#39;s membership has increased from 32,715 to 47,657 - a rise of more than 45 per cent.</literal></binding>
+  </result>
+ </results>
+</sparql>
