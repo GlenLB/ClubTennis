@@ -1,6 +1,10 @@
 /* Inscription */
 #inscriptionMain {
 	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 70px;
 }
 #inscriptionMain>h1 {
 	margin-top: 80px;

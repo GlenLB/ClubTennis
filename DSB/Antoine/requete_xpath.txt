@@ -1,1 +1,2 @@
-/mon_club//abonne[@id='24']/@prenom
+/* Le prénom de l'abonné ayant l'ID n°24 */
+//abonne[@id='24']/@prenom

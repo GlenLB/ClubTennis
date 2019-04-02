@@ -51,6 +51,15 @@ switch ($requestURI) {
     case "/apiInscription":
         include_once $rootDir . "/bdd/php/inscription.php";
         break;
+    case "/dsb":
+        include_once $rootDir . "/DSB/page_web/dsbTemplate.php";
+        break;
+    case "/bddToXML":
+        include_once $rootDir . "/DSB/Antoine/xml.php";
+        break;
+    case "/executionRequetesDSB":
+        include_once $rootDir . "/DSB/page_web/execution_requetes.php";
+        break;
     // Gestion des erreurs 404
     default:
         echo "Erreur 404 -> page non trouvée.";

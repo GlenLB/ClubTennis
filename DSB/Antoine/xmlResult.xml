@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mon_club SYSTEM "dtd_clubTennis.dtd">
+<mon_club>
+    <club id_club="1" nom="EARTHLOADER" horaires="08h00-12h00-16h00-21h00" tel="0102030405" email="earthloader-tennis@earthloader.fr" adresse="1 rue de la Salle, 85100 Les Sables d'Olonne"/>
+    <club id_club="2" nom="Bouffard club" horaires="08h00-12h00-16h00-21h00" tel="0290302114" email="bouffard-club-tennis@earthloader.fr" adresse="15 allée de l'Herbe verte, Lieu dit BouffardVille"/>
+    <club id_club="3" nom="LE BAILL CLUB" horaires="08h00-12h00-16h00-20h00" tel="0299252207" email="lebaill-club-tennis@earthloader.fr" adresse="7 allée du grand-soleil, 35740 Beautiful City"/>
+    <club id_club="4" nom="ideo tennis" horaires="08h00-12h00-16h00-20h00" tel="0299252208" email="ideo-club-tennis@earthloader.fr" adresse="Zone commerciale du terrain, 14789 Pissenville"/>
+    <club id_club="5" nom="elite tennis" horaires="08h00-12h00-16h00-20h00" tel="0499252208" email="elite-tennis@earthloader.fr" adresse="ZA de la croix verte, 35000 Rennes"/>
+    <terrain id_terrain="1" couvert="0" type="TB" id_club="1"/>
+    <terrain id_terrain="2" couvert="0" type="TB" id_club="1"/>
+    <terrain id_terrain="3" couvert="0" type="TB" id_club="1"/>
+    <terrain id_terrain="4" couvert="0" type="TB" id_club="1"/>
+    <terrain id_terrain="5" couvert="0" type="G" id_club="1"/>
+    <terrain id_terrain="6" couvert="0" type="G" id_club="1"/>
+    <terrain id_terrain="7" couvert="1" type="S" id_club="1"/>
+    <terrain id_terrain="8" couvert="1" type="S" id_club="1"/>
+    <terrain id_terrain="9" couvert="1" type="S" id_club="1"/>
+    <terrain id_terrain="10" couvert="1" type="S" id_club="1"/>
+    <terrain id_terrain="11" couvert="1" type="S" id_club="1"/>
+    <terrain id_terrain="12" couvert="1" type="S" id_club="1"/>
+    <terrain id_terrain="13" couvert="1" type="S" id_club="1"/>
+    <terrain id_terrain="14" couvert="1" type="S" id_club="1"/>
+    <entraineur id_entraineur="1" prenom="ROBERT" nom="DE NIRO" description="UN ENTRAINEUR QUI PLAISANTE PAS"/>
+    <entraineur id_entraineur="2" prenom="RAMBO" nom="LE SEUL L'UNIQUE" description="BANZAAAAAAAÏÏÏÏ"/>
+    <entraineur id_entraineur="3" prenom="ROCKY" nom="BALBOA" description="ADRIEEEENNNNNEEEE !!!"/>
+    <entraineur id_entraineur="4" prenom="CHUCK" nom="NORRIS" description="IL A INVENTÉ LA DSB, 3 FOIS"/>
+    <entraineur id_entraineur="5" prenom="RAPHAËL" nom="NADAL" description="DES POMPES !"/>
+    <entrainement id_entrainement="1" heure_debut="2019-03-22 16:50:25" heure_fin="2019-03-22 19:00:00" niveau="D" id_club="1"/>
+    <entrainement id_entrainement="2" heure_debut="2019-03-26 13:06:40" heure_fin="2019-03-26 15:06:40" niveau="D" id_club="1"/>
+    <entrainement id_entrainement="3" heure_debut="2019-03-24 11:17:18" heure_fin="2019-03-24 13:17:34" niveau="D" id_club="1"/>
+    <abonne id_abonne="1" prenom="GLEN" nom="LE BAILL" pseudo="GLB" email="lebaill.glen@gmail.com" reduction="1" description="Joueur de tennis occasionnel, j'essaie de jouer toutes les semaines." niveau="D" mdp="motdepassehashé" id_club="1" id_entrainement="1"/>
+    <abonne id_abonne="21" prenom="ALEXANDRE" nom="BOUTIER" pseudo="NINJA" email="ninja@gmail.com" reduction="1" description="Je suis un ninja du tennis !" niveau="D" mdp="motdepassehashé" id_club="1" id_entrainement="1"/>
+    <abonne id_abonne="22" prenom="MAMIE" nom="NOVA" pseudo="MAMIE NOVA" email="mamie-nova@gmail.com" reduction="1" description="Une redoutable adversaire." niveau="A" mdp="motdepassehashé" id_club="1" id_entrainement="1"/>
+    <abonne id_abonne="23" prenom="CLARK" nom="KENT" pseudo="SUPERMAN" email="superman@gmail.com" reduction="1" description="J'envoie des boulets de canons." niveau="A" mdp="motdepassehashé" id_club="1" id_entrainement="1"/>
+    <abonne id_abonne="24" prenom="ABONNE1" nom="NOM1" pseudo="PSEUDO1" email="abonne1@gmail.com" reduction="1" description="J'aime jouer au tennis." niveau="D" mdp="motdepassehashé" id_club="1" id_entrainement="1"/>
+    <abonne id_abonne="25" prenom="ABONNE2" nom="NOM2" pseudo="PSEUDO2" email="abonne2@gmail.com" reduction="1" description="J'aime jouer au tennis." niveau="D" mdp="motdepassehashé" id_club="1" id_entrainement="1"/>
+    <abonne id_abonne="26" prenom="ABONNE3" nom="NOM3" pseudo="PSEUDO3" email="abonne3@gmail.com" reduction="1" description="J'aime jouer au tennis." niveau="D" mdp="motdepassehashé" id_club="1" id_entrainement="1"/>
+    <match_tennis id_match="1" heure_debut="2019-03-26 13:48:54" heure_fin="2019-03-26 15:49:18" competition="1" id_club="1" id_terrain="1"/>
+    <match_tennis id_match="2" heure_debut="2019-03-24 13:51:38" heure_fin="2019-03-24 15:51:38" competition="1" id_club="1" id_terrain="1"/>
+    <match_tennis id_match="3" heure_debut="2019-03-19 06:53:07" heure_fin="2019-03-19 09:53:07" competition="1" id_club="1" id_terrain="1"/>
+    <match_tennis id_match="4" heure_debut="2019-03-06 11:53:48" heure_fin="2019-03-06 14:53:48" competition="1" id_club="1" id_terrain="1"/>
+    <match_tennis id_match="5" heure_debut="2019-03-04 12:54:32" heure_fin="2019-03-04 15:54:32" competition="1" id_club="1" id_terrain="1"/>
+    <avatar id_avatar="3" filename="SUPERMAN_AVATAR.jpg" id_abonne="23"/>
+    <avatar id_avatar="4" filename="MAMIE_NOVA_AVATAR.jpg" id_abonne="22"/>
+    <abonne_perd_match id_abonne="24" id_match="1"/>
+    <abonne_perd_match id_abonne="22" id_match="2"/>
+    <abonne_gagne_match id_abonne="25" id_match="1"/>
+    <abonne_gagne_match id_abonne="23" id_match="2"/>
+    <abonne_gagne_match id_abonne="23" id_match="3"/>
+    <abonne_gagne_match id_abonne="23" id_match="4"/>
+    <abonne_gagne_match id_abonne="23" id_match="5"/>
+    <entrainement_a_lieu_sur_terrain id_terrain="1" id_entrainement="1"/>
+    <entrainement_a_lieu_sur_terrain id_terrain="7" id_entrainement="1"/>
+    <entrainement_a_lieu_sur_terrain id_terrain="2" id_entrainement="2"/>
+    <entrainement_a_lieu_sur_terrain id_terrain="3" id_entrainement="3"/>
+    <entrainement_a_lieu_sur_terrain id_terrain="7" id_entrainement="3"/>
+    <entrainement_a_entraineur id_entrainement="1" id_entraineur="1"/>
+    <entrainement_a_entraineur id_entrainement="2" id_entraineur="2"/>
+    <entrainement_a_entraineur id_entrainement="3" id_entraineur="3"/>
+    <entrainement_a_entraineur id_entrainement="3" id_entraineur="4"/>
+</mon_club>

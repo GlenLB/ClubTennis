@@ -1,6 +1,7 @@
 // Import du JS spécifique à la page d'accueil
 import * as accueil from "./accueil.js";
 import * as inscription from "../../bdd/js/inscription.js";
+import * as DSB from "../../DSB/page_web/execution_requetes.js";
 
 window.onload = () => {
     // Déclaration du mode strict
@@ -82,6 +83,13 @@ window.onload = () => {
     if (location.pathname == "/inscription") {
         // Importé depuis le module inscription.js
         inscription.exec();
+    }
+
+
+    // DSB -------------------------------------
+    if (location.pathname == "/dsb") {
+        // Importé depuis le module accueil.js
+        DSB.exec();
     }
 
     /* Pour un chargement de la page propre */

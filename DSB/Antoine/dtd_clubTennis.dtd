@@ -1,52 +1,44 @@
+<!-- TABLES ________________________________________ -->
 
-<!-- Classe Club -->
-
-<!ELEMENT Club EMPTY>
-<!ATTLIST Club
-id_club ID #REQUIRED
+<!-- club -->
+<!ELEMENT club EMPTY>
+<!ATTLIST club
+id_club CDATA #REQUIRED
 nom CDATA #REQUIRED
 horaires CDATA #REQUIRED
 tel CDATA #REQUIRED
 email CDATA #REQUIRED
 adresse CDATA #REQUIRED>
-<!ELEMENT liste_club(Club*)>
 
-<!-- Terrain -->
-
-<!ELEMENT Terrain EMPTY>
-<!ATTLIST Terrain
-id_terrain ID #REQUIRED
+<!-- terrain -->
+<!ELEMENT terrain EMPTY>
+<!ATTLIST terrain
+id_terrain CDATA #REQUIRED
 couvert (0|1) "0"
 type (TB|G|S) "S"
-id_club IDREF #REQUIRED>
-<!ELEMENT liste_terrain(Terrain*)>
+id_club CDATA #REQUIRED>
 
-<!-- Entraineur -->
-
-<!ELEMENT Entraineur EMPTY>
-<!ATTLIST Entraineur
-id_entraineur ID #REQUIRED
+<!-- entraineur -->
+<!ELEMENT entraineur EMPTY>
+<!ATTLIST entraineur
+id_entraineur CDATA #REQUIRED
 prenom CDATA #REQUIRED
 nom CDATA #REQUIRED
 description CDATA #REQUIRED>
-<!ELEMENT liste_entraineur(Entraineur*)>
 
-<!-- Entrainement -->
-
-<!ELEMENT Entrainement EMPTY>
-<!ATTLIST Entrainement
-id_entrainement ID #REQUIRED
+<!-- entrainement -->
+<!ELEMENT entrainement EMPTY>
+<!ATTLIST entrainement
+id_entrainement CDATA #REQUIRED
 heure_debut CDATA #REQUIRED
 heure_fin CDATA #REQUIRED
 niveau (D|I|A) "D"
-id_club IDREF #REQUIRED>
-<!ELEMENT liste_entrainement(Entrainement*)
+id_club CDATA #REQUIRED>
 
-<!-- Classe Abonne -->
-
-<!ELEMENT Abonne (Abonne?)>
-<!ATTLIST Abonne
-id_abonne ID #REQUIRED
+<!-- abonne -->
+<!ELEMENT abonne (abonne?)>
+<!ATTLIST abonne
+id_abonne CDATA #REQUIRED
 prenom CDATA #REQUIRED
 nom CDATA #REQUIRED
 pseudo CDATA #REQUIRED
@@ -55,79 +47,65 @@ reduction (0|1) "0"
 description CDATA #REQUIRED
 niveau (D|I|A) "D"
 mdp CDATA #REQUIRED
-id_club IDREF #REQUIRED
-id_entrainement IDREF #REQUIRED>
-<!ELEMENT liste_abonne(Abonne*)>
+id_club CDATA #REQUIRED
+id_entrainement CDATA #REQUIRED>
 
-<!-- Classe Match -->
-
-<!ELEMENT Match_Tennis EMPTY>
-<!ATTLIST Match_Tennis
-id_match ID #REQUIRED
+<!-- match-tennis -->
+<!ELEMENT match_tennis EMPTY>
+<!ATTLIST match_tennis
+id_match CDATA #REQUIRED
 heure_debut CDATA #REQUIRED
 heure_fin CDATA #REQUIRED
 competition (0|1) "0"
-id_club IDREF #REQUIRED
-id_terrain IDREF #REQUIRED>
-<!ELEMENT liste_match(Match*)>
+id_club CDATA #REQUIRED
+id_terrain CDATA #REQUIRED>
 
-<!-- Classe Avatar -->
-
-<!ELEMENT Avatar EMPTY>
-<!ATTLIST Avatar
-id_avatar ID #REQUIRED
+<!-- avatar -->
+<!ELEMENT avatar EMPTY>
+<!ATTLIST avatar
+id_avatar CDATA #REQUIRED
 filename CDATA #REQUIRED
-id_abonne IDREF #REQUIRED>
-<!ELEMENT liste_avatar(Avatar*)>
-<!-- Classe Image -->
+id_abonne CDATA #REQUIRED>
 
-<!ELEMENT Image EMPTY>
-<!ATTLIST Image
-id_image ID #REQUIRED
-fileName CDATA #REQUIRED>
-<!ELEMENT liste_image(Image*)>
+<!-- image -->
+<!ELEMENT image EMPTY>
+<!ATTLIST image
+id_image CDATA #REQUIRED
+filename CDATA #REQUIRED>
 
-<--                     Relations                   -->
 
-<!-- Classe Abonne Perd Match -->
+<!-- RELATIONS ________________________________________ -->
 
-<!ELEMENT Abonne_Perd_Match EMPTY>
-<!ATTLIST Abonne_Perd_Match
-id_abonne IDREF #REQUIRED
-id_match IDREF #REQUIRED>
-<!ELEMENT liste_Abonne_Perd_Match(Abonne_Perd_Match*)>
 
-<!-- Classe Abonne Gagne Match -->
+<!-- abonne_perd_match -->
+<!ELEMENT abonne_perd_match EMPTY>
+<!ATTLIST abonne_perd_match
+id_abonne CDATA #REQUIRED
+id_match CDATA #REQUIRED>
 
-<!ELEMENT Abonne_Gagne_Match EMPTY>
-<!ATTLIST Abonne_Gagne_Match
-id_abonne IDREF #REQUIRED
-id_match IDREF #REQUIRED>
-<!ELEMENT liste_Abonne_Gagne_Match(Abonne_Gagne_Match*)>
+<!-- abonne_gagne_match -->
+<!ELEMENT abonne_gagne_match EMPTY>
+<!ATTLIST abonne_gagne_match
+id_abonne CDATA #REQUIRED
+id_match CDATA #REQUIRED>
 
-<!-- Classe Entrainement a lieu sur terrain -->
+<!-- entrainement_a_lieu_sur_terrain -->
+<!ELEMENT entrainement_a_lieu_sur_terrain EMPTY>
+<!ATTLIST entrainement_a_lieu_sur_terrain
+id_terrain CDATA #REQUIRED
+id_entrainement CDATA #REQUIRED>
 
-<!ELEMENT Entrainement_sur_terrain EMPTY>
-<!ATTLIST Entrainement_sur_terrain
-id_terrain IDREF #REQUIRED
-id_entrainement IDREF #REQUIRED>
-<!ELEMENT liste_Entrainement_sur_terrain(Entrainement_sur_terrain*)>
+<!-- entrainement_a_entraineur -->
+<!ELEMENT entrainement_a_entraineur EMPTY>
+<!ATTLIST entrainement_a_entraineur
+id_entrainement CDATA #REQUIRED
+id_entraineur CDATA #REQUIRED>
 
-<!-- Classe Entrainement à Entraineur -->
+<!-- entraineur_travaille_club -->
+<!ELEMENT entraineur_travaille_club EMPTY>
+<!ATTLIST entraineur_travaille_club
+id_entraineur CDATA #REQUIRED
+id_club CDATA #REQUIRED>
 
-<!ELEMENT Entrainement_a_entraineur EMPTY>
-<!ATTLIST Entrainement_a_entraineur
-id_entrainement IDREF #REQUIRED
-id_entraineur IDREF #REQUIRED>
-<!ELEMENT liste_Entrainement_a_entraineur(Entrainement_a_entraineur*)>
-
-<!-- Classe Entraineur travaille pour club -->
-
-<!ELEMENT Entraineur_travaille_club EMPTY>
-<!ATTLIST Entraineur_travaille_club
-id_entraineur IDREF #REQUIRED
-id_club IDREF #REQUIRED>
-<!ELEMENT liste_Entraineur_travaille_club(Entraineur_travaille_club*)>
-
-<!-- Club -->
-<!ELEMENT mon_club(liste_abonne, liste_entraineur, liste_entrainement, liste_match, liste_ terrain, liste_avatar, liste_image, liste_Abonne_Perd_Match, liste_Abonne_Gagne_Match, liste_Entrainement_sur_terrain, liste_Entrainement_a_entraineur, liste_Entraineur_travaille_club)>
+<!-- mon_club -->
+<!ELEMENT mon_club (club*, terrain*, entraineur*, entrainement*, abonne*, match_tennis*, avatar*, image*, abonne_perd_match*, abonne_gagne_match*, entrainement_a_lieu_sur_terrain*, entrainement_a_entraineur*, entraineur_travaille_club*)>

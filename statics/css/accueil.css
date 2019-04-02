@@ -1,6 +1,6 @@
 /* MAIN ------------------------------- */
 
-main {
+#accueilMain {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -113,7 +113,7 @@ main {
 	}
 }
 
-main>h2 {
+#accueilMain>h2 {
 	text-align: center;
 	margin-top: 60px;
 	margin-bottom: 40px;

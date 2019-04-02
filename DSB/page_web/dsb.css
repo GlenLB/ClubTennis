@@ -1,0 +1,84 @@
+#dsbMain {
+    margin-top: 120px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dsbMain>h1 {
+    margin-bottom: 40px;
+}
+
+.fa-database {
+    font-size: 30px;
+}
+
+#dsbMain>p {
+    width: auto;
+    max-width: 900px;
+    text-align: justify;
+}
+
+#dsbMain h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#mcd {
+    width: auto;
+    max-width: 90%;
+}
+
+#requetesSQL {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#requetesSQL .btn {
+    margin-top: -5px;
+    margin-bottom: 40px;
+}
+
+/* Tableaux des réponses */
+.tableResponse {
+    margin-bottom: 20px;
+}
+.tableResponse tr:nth-child(odd) {
+    background-color: #daffd6;
+}
+.tableResponse td {
+    padding: 15px;
+}
+
+/* Embedded gist */
+.gist {
+    max-width: 800px;
+    max-height: 700px;
+    overflow: auto;
+}
+.Box-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.gist-meta {
+    display: none;
+}
+
+@media(max-width: 1050px) {
+    .gist {
+        max-width: 500px;
+        max-height: 700px;
+        overflow: auto;
+    }
+    #dsbMain>p {
+        width: 90%;
+        max-width: auto;
+        text-align: justify;
+    }
+    #mcd {
+        width: 500px;
+        max-width: 90%;
+    }
+}
