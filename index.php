@@ -13,8 +13,7 @@ $rootDir = getenv("TENNISROOTDIR");
 /**
  *  Définition de la structure d'une page Html
  */
-class Page
-{
+class Page {
     public $title;
     public $description;
     public $canonical;
@@ -50,6 +49,9 @@ switch ($requestURI) {
         break;
     case "/apiInscription":
         include_once $rootDir . "/bdd/php/inscription.php";
+        break;
+    case "/apiConnexion":
+        include_once $rootDir . "/bdd/php/connexion.php";
         break;
     case "/dsb":
         include_once $rootDir . "/DSB/page_web/dsbTemplate.php";

@@ -68,16 +68,16 @@ INSERT INTO ABONNE (
     ID_ENTRAINEMENT
 ) 
 VALUES (
-    "ABONNE3",
-    "NOM3",
-    "PSEUDO3",
-    "abonne3@gmail.com",
+    "Antoine",
+    "Bouffard",
+    "Xxgeek",
+    "antoine.bouffard@gmail.com",
     "1",
-    "J'aime jouer au tennis.",
+    "Mon service ? Un boulet de canon !",
     "D",
     "motdepassehashé",
     "1",
-    "1"
+    "2"
 );
 
 /* INSERTION MATCH_TENNIS */

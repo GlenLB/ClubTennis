@@ -26,9 +26,10 @@
         </span>
         <!-- Liens nav mobile -->
         <div id="liensNavMobile" class="liensNavMobileHidden">
-            <a href="">INSCRIPTION</a><br>
+            <a href="/inscription">INSCRIPTION</a><br>
             <a href="">LE CLUB</a><br>
             <a href="">CONTACT</a><br>
+            <a href="/dsb">DSB</a><br>
             <i id="userIconMobile" class="far fa-user userIcon"></i>
         </div>
         <!-- Navigation -->
@@ -43,6 +44,7 @@
                 <a href="/inscription">INSCRIPTION</a>
                 <a href="#">LE CLUB</a>
                 <a href="#">CONTACT</a>
+                <a href="/dsb">DSB</a><br>
             </div>
         </nav>
         <!-- Icone user pour ecrans larges -->
@@ -55,7 +57,7 @@
             <h3>Connexion</h3>
             <input type="text" placeholder="email">
             <input type="password" placeholder="mot de passe">
-            <a href="#" class="btn">SE CONNECTER</a>
+            <a href="#1" class="btn">SE CONNECTER</a>
         </form>
     </div>
     

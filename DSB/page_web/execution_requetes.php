@@ -25,7 +25,7 @@ $pass = getenv("MYSQL_PASS");
 try {
     // Ouverture de la connexion
     $bdd = new PDO("mysql:host=localhost;dbname=CLUBTENNIS", $user, $pass);
-    // Préparation de l'insertion
+    // Récupération des données
     $req = $bdd->query($dataSQL);
     while($data = $req->fetch(PDO::FETCH_OBJ)) {
         foreach($data as $col) {

@@ -1,6 +1,7 @@
 // Import du JS spécifique à la page d'accueil
 import * as accueil from "./accueil.js";
 import * as inscription from "../../bdd/js/inscription.js";
+import * as connexion from "../../bdd/js/connexion.js";
 import * as DSB from "../../DSB/page_web/execution_requetes.js";
 
 window.onload = () => {
@@ -76,7 +77,7 @@ window.onload = () => {
 
     // TAILLE MINIMUM PAGE ---------------------------
 
-    document.querySelector("main").style.minHeight = window.innerHeight - 2*document.querySelector("nav").clientHeight - document.querySelector("footer").clientHeight + "px";
+    document.querySelector("main").style.minHeight = window.innerHeight - 2 * document.querySelector("nav").clientHeight - document.querySelector("footer").clientHeight + "px";
 
 
     // INSCRIPTION UTILISATEUR ---------------------------
@@ -84,6 +85,10 @@ window.onload = () => {
         // Importé depuis le module inscription.js
         inscription.exec();
     }
+
+    // CONNEXION UTILISATEUR ---------------------------
+    // Importé depuis le module connexion.js
+    connexion.exec();
 
 
     // DSB -------------------------------------

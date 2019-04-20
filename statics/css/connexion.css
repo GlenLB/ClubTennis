@@ -1,0 +1,28 @@
+/* Stylise la div qui informe l'utilisateur du succes ou non de sa connexion */
+.connexionRetour {
+	position: fixed;
+    font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 50px;
+	max-width: 350px;
+    border-radius: 5px;
+    color: white;
+	padding: 10px;
+}
+.connexionSuccess {
+	background-color: yellowgreen;
+}
+.connexionError {
+	background-color: red;
+}
+@media(max-width: 550px) {
+	#connexionBox input {
+		margin-bottom: 5px;
+		padding: 5px;
+		width: 200px;
+		border: 1px solid silver;
+	}
+}

@@ -4,6 +4,8 @@
 @import url("./accueil.css");
 /* Import fichier CSS page inscription */
 @import url("./inscription.css");
+/* Import fichier CSS page connexion */
+@import url("./connexion.css");
 /* Import fichier CSS page DSB */
 @import url("../../DSB/page_web/dsb.css");
 /* Import fichier CSS footer */

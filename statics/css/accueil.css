@@ -47,6 +47,7 @@
 	position: absolute;
 	padding: 5px;
 }
+
 /* h1 */
 #boxAccueil>h1 {
 	color: white;
@@ -55,6 +56,7 @@
 	text-align: center;
 	text-transform: uppercase;
 }
+
 /* Button inscription */
 #btnInscription {
 	margin: auto;
@@ -62,6 +64,7 @@
 	width: 200px;
 	border-radius: 100px;
 }
+
 @media(max-width: 550px) {
 	/* h1 */
 	#boxAccueil>h1 {
