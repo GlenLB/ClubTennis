@@ -1,0 +1,157 @@
+/* Page Club */
+
+#contactMain {
+	margin-top: 140px;
+}
+
+table {
+	border-collapse: separate;
+}
+
+td, th {
+	border: 1px solid silver;
+	box-shadow: 1px 1px 1px black;
+	padding: 5px;
+}
+
+th {
+	font-size: 1.1em;
+	text-decoration: underline;
+}
+
+caption {
+	font-size: 1.4em;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: #e65c00;
+	text-underline-position: under;
+	margin-bottom: 20px;
+}
+
+table th {
+	text-decoration: underline;
+	text-decoration-color: #33cc33;
+	text-underline-position: under;
+}
+
+#tarif {
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+	align-items: center;
+	font-family: Arial;
+	padding: 20px;
+}
+
+#tarif div {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 0px 0px 4px silver;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 90%;
+}
+
+#tarif div img {
+	margin: 20px;
+	width: 30%;
+	height: 85%;
+}
+
+#tarif div table {
+	margin: 20px;
+}
+
+#saison {
+	margin-top: 50px;
+}
+
+#equipe {
+	display: flex;
+	justify-content: space-around;
+	box-shadow: 2px 2px 2px silver;
+	margin-top: 50px;
+	font-family: Arial;
+	font-weight: 1.3em;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px black;
+	background-image: url('images/background1.jpg');
+	color: white
+}
+
+.president {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 40%;
+	height: 300px;
+}
+
+.president img {
+	width: 125px;
+	height: 125px;
+	border: 3px solid orange;
+	border-radius: 100px;
+}
+
+.president h2 {
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: #e65c00;
+	text-underline-position: under;
+}
+
+.president figcaption {
+	margin-top: 10px;
+}
+
+#bug_figcaption {
+	margin-left: 15px;
+}
+
+#historique {
+	box-shadow: 2px 2px 2px silver;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	font-family: Arial;
+}
+
+#hist_club {
+	display: block;
+	margin: auto;
+	text-align: justify;
+	width: 75%;
+}
+
+#hist_club h2 {
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: #e65c00;
+	text-underline-position: under;
+}
+
+@media (max-width: 800px) {
+	#tarif div img {
+		order: 1;
+	}
+	#tarif div table {
+		order: 2;
+	}
+	#tarif div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (max-width: 500px) {
+	#tarif div {
+		width: 98%;
+		padding: 5px;
+	}
+}

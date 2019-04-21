@@ -27,8 +27,8 @@
         <!-- Liens nav mobile -->
         <div id="liensNavMobile" class="liensNavMobileHidden">
             <a href="/inscription">INSCRIPTION</a><br>
-            <a href="">LE CLUB</a><br>
-            <a href="">CONTACT</a><br>
+            <a href="/club">LE CLUB</a><br>
+            <a href="/contact">CONTACT</a><br>
             <a href="/dsb">DSB</a><br>
             <i id="userIconMobile" class="far fa-user userIcon"></i>
         </div>

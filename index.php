@@ -13,7 +13,8 @@ $rootDir = getenv("TENNISROOTDIR");
 /**
  *  Définition de la structure d'une page Html
  */
-class Page {
+class Page
+{
     public $title;
     public $description;
     public $canonical;
@@ -46,6 +47,15 @@ switch ($requestURI) {
         );
         // Inclusion du template
         include_once $rootDir . "/templates/inscriptionTemplate.php";
+        break;
+    case "/club":
+        $page = new Page(
+            "Club de tennis EarthLoader",
+            "Club de tennis EarthLoader",
+            $fullHost . $requestURI
+        );
+        // Inclusion du template
+        include_once $rootDir . "/templates/clubTemplate.php";
         break;
     case "/apiInscription":
         include_once $rootDir . "/bdd/php/inscription.php";
