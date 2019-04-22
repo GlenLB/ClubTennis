@@ -1,0 +1,139 @@
+#contactMain {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#contactContainer {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+/* FORMULAIRE ---------------- */
+
+.formulaire {
+	box-shadow: -1px 0px 4px silver;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 500px;
+	height: 500px;
+}
+
+.formulaire input, .formulaire textarea {
+	margin-bottom: 5px;
+	padding: 5px;
+	width: 400px;
+	border: 1px solid silver;
+}
+
+.formulaire textarea {
+	height: 250px;
+}
+
+.formulaire .btn {
+	margin-top: 10px;
+}
+
+.formulaire input::placeholder, .formulaire textarea::placeholder {
+	color: silver;
+}
+
+/* RESTE DE LA PAGE ------------------- */
+
+#contact_autre {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 1px 0px 4px silver;
+	padding: 20px;
+}
+
+#paragraphe1 {
+	padding: 10px;
+}
+
+#appel {
+	width: 40%;
+	height: 420px;
+	border-radius: 7px;
+}
+
+#appel p {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#appel h2 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+#carte {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin: 50px;
+}
+
+#carte iframe {
+	margin-top: 15px;
+	width: 50%;
+	height: 380px;
+	border: solid 2px white;
+	box-shadow: 3px 3px 20px silver;
+	border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+	#contactContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	.formulaire {
+		box-shadow: 0px 0px 4px silver;
+	}
+	#contact_autre {
+		margin-top: 30px;
+		box-shadow: 0px 0px 4px silver;
+	}
+	#carte iframe {
+		margin-top: 15px;
+		width: 90%;
+		height: 380px;
+		border: solid 2px white;
+		box-shadow: 3px 3px 20px silver;
+		border-radius: 5px;
+	}
+}
+
+@media (max-width: 500px) {
+	.formulaire {
+		box-shadow: 0px 0px 4px silver;
+		padding: 10px;
+		width: 90%;
+	}
+
+	.formulaire input, .formulaire textarea {
+		margin-bottom: 5px;
+		padding: 5px;
+		width: 85%;
+		border: 1px solid silver;
+	}
+
+	#contact_autre {
+		box-shadow: 0px 0px 4px silver;
+		padding: 10px;
+		width: 90%;
+	}
+}

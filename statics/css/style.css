@@ -8,6 +8,8 @@
 @import url("./connexion.css");
 /* Import fichier CSS page club */
 @import url("./club.css");
+/* Import fichier CSS page contact */
+@import url("./contact.css");
 /* Import fichier CSS page DSB */
 @import url("../../DSB/page_web/dsb.css");
 /* Import fichier CSS footer */

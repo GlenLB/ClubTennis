@@ -42,8 +42,8 @@
             <!-- Liens -->
             <div id="liensNav">
                 <a href="/inscription">INSCRIPTION</a>
-                <a href="#">LE CLUB</a>
-                <a href="#">CONTACT</a>
+                <a href="/club">LE CLUB</a>
+                <a href="/contact">CONTACT</a>
                 <a href="/dsb">DSB</a><br>
             </div>
         </nav>

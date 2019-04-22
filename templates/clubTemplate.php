@@ -103,7 +103,6 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
 				</div>
 
 		</section>
-
 	</main>
 
 <?php

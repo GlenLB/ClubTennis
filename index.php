@@ -57,6 +57,15 @@ switch ($requestURI) {
         // Inclusion du template
         include_once $rootDir . "/templates/clubTemplate.php";
         break;
+    case "/contact":
+        $page = new Page(
+            "Club de tennis EarthLoader contact",
+            "Club de tennis EarthLoader contact",
+            $fullHost . $requestURI
+        );
+        // Inclusion du template
+        include_once $rootDir . "/templates/contactTemplate.php";
+        break;
     case "/apiInscription":
         include_once $rootDir . "/bdd/php/inscription.php";
         break;
