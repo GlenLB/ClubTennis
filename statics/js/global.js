@@ -1,5 +1,6 @@
 // Import du JS spécifique à la page d'accueil
 import * as accueil from "./accueil.js";
+// Autres imports
 import * as inscription from "../../bdd/js/inscription.js";
 import * as connexion from "../../bdd/js/connexion.js";
 import * as DSB from "../../DSB/page_web/execution_requetes.js";
@@ -52,18 +53,36 @@ window.onload = () => {
 
     // ICON USER CONNEXION && MODAL CONNEXION -----------------------------------------------
 
+    // Modale de connexion
+    const btnConnexionNavbar = document.querySelectorAll(".btnConnexionNavbar");
+    // Icone pour afficher l'espace abonné
     const userIcons = document.querySelectorAll(".userIcon");
+    // Modale de connexion
     const modalConnect = document.querySelector("#modalConnect");
+    // Bouton de fermeture de la modale de connexion
     const btnClose = document.querySelector("#modalClose");
-    userIcons.forEach((icon) => icon.onclick = handleUserIconsAndBtnCloseClick)
-    btnClose.onclick = handleUserIconsAndBtnCloseClick
+    if (btnConnexionNavbar != null) {
+        btnConnexionNavbar.forEach(btn => btn.onclick = handleUserBtnConnexionNavbarAndBtnCloseClick);
+        btnClose.onclick = handleUserBtnConnexionNavbarAndBtnCloseClick;
+    }
+    if(userIcons != null) {
+        userIcons.forEach(icon => icon.onclick = handleClickUserSpace)
+    }
     modalConnect.style.display = "none"
+
     /**
-     * Handler pour le clic sur l'icone de connexion et le btn de fermeture de la modale
-     * de connexion
+     * Handler pour le clic sur le bouton de connexion de la navbar et le btn de fermeture de la modale de connexion
      */
-    function handleUserIconsAndBtnCloseClick() {
+    function handleUserBtnConnexionNavbarAndBtnCloseClick() {
         modalConnect.style.display != "none" ? modalConnect.style.display = "none" : modalConnect.style.display = "flex";
+    }
+
+    /**
+     * Handler pour le clic sur l'icone d'espace abonné
+     * Toggle la modale de l'espace abonné
+     */
+    function handleClickUserSpace() {
+
     }
 
 

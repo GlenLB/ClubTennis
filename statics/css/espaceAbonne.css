@@ -1,0 +1,35 @@
+#modaleEspaceAbonne {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 100;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 4px silver;
+    width: 300px;
+}
+
+#modaleEspaceAbonne .fas {
+    font-size: 20px;
+    color: var(--btnColor);
+}
+
+#modaleEspaceAbonne>#infoConnexion {
+    font-weight: bold;
+    color: var(--btnColor);
+    margin-bottom: 5px;
+}
+
+#modaleEspaceAbonne>#deconnexion {
+    background: linear-gradient(rgb(255, 161, 161), red);
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.red {
+    color: red;
+}

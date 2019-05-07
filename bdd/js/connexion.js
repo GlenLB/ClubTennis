@@ -44,8 +44,8 @@ export function exec() {
                         console.log("Connexion non réussie");
                         console.log(response);
                     } else {
-                        // Insertion réussie, avertir l'utilisateur
-                        // Avertir l'utilisateur
+                        // Connexion et création de session réussies
+                        // Avertit l'utilisateur
                         msgRetour.innerHTML = "Vous êtes connecté.";
                         msgRetour.classList.add("connexionSuccess");
                         msgRetour.classList.remove("connexionError");

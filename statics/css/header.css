@@ -107,6 +107,13 @@ nav h2 {
 	margin-top: 30px;
 }
 
+#btnConnexionNavbar {
+	z-index: 102;
+	position: fixed;
+	top: 17.5px;
+	right: 10%;
+}
+
 @media(max-width: 1050px) {
 	#userIcon {
 		display: none;

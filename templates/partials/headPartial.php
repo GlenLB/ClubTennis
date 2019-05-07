@@ -21,10 +21,10 @@ session_start();
 
 <body>
     <?php
-    if($_SESSION["prenom"]) {
-        echo($_SESSION["prenom"]);
-    }
-    ?>
+if ($_SESSION["prenom"]) {
+    echo ($_SESSION["prenom"]);
+}
+?>
     <!-- Header -->
     <header>
         <!-- Menu hamburger mobile -->
@@ -39,6 +39,15 @@ session_start();
             <a href="/club">LE CLUB</a><br>
             <a href="/contact">CONTACT</a><br>
             <a href="/dsb">DSB</a><br>
+            <?php
+                // Si l'utilisateur n'est pas connecté, affiche le bouton de connexion
+                if (!$_SESSION["prenom"]) {
+                    echo ('<a id="btnConnexionNavbar" class="btn btnConnexionNavbar">SE CONNECTER</a>');
+                } else {
+                    // Si l'utilisateur est connecté, affiche l'icone d'espace abonné
+                    echo ('<i id="userIconMobile" class="far fa-user userIcon"></i>');
+                }
+            ?>
             <i id="userIconMobile" class="far fa-user userIcon"></i>
         </div>
         <!-- Navigation -->
@@ -56,8 +65,16 @@ session_start();
                 <a href="/dsb">DSB</a><br>
             </div>
         </nav>
-        <!-- Icone user pour ecrans larges -->
-        <i id="userIcon" class="far fa-user userIcon"></i>
+        <!-- Icone connexion espace abonné -->
+        <?php
+            // Si l'utilisateur n'est pas connecté, affiche le bouton de connexion
+            if (!$_SESSION["prenom"]) {
+                echo ('<a id="btnConnexionNavbar" class="btn btnConnexionNavbar" href="#1">SE CONNECTER</a>');
+            } else {
+                // Si l'utilisateur est connecté, affiche l'icone d'espace abonné
+                echo ('<i id="userIcon" class="far fa-user userIcon"></i>');
+            }
+        ?>
     </header>
     <!-- Modal connexion -->
     <div id="modalConnect">
@@ -68,4 +85,16 @@ session_start();
             <input type="password" placeholder="mot de passe">
             <a href="#1" class="btn">SE CONNECTER</a>
         </form>
+    </div>
+    <!-- Modal espace abonné -->
+    <div id="modaleEspaceAbonne">
+        <i id="infoConnexion"><i class="fas fa-check-square"></i> Connecté</i>
+        <i><?= $_SESSION["prenom"] . " " . $_SESSION["nom"] ?></i>
+        <i><?= $_SESSION["email"] ?></i>
+        <i><?= $_SESSION["description"] ?></i>
+        <i>Niveau tennis : <?= $_SESSION["niveau"] ?></i>
+        <a class="info" href="#1">Changer mes informations</a>
+        <a class="info" href="#1">Mot de passe perdu ?</a>
+        <a id="deconnexion" href="#1" class="btn">DÉCONNEXION</a>
+        <a class="red" href="#1">Supprimer mon compte</a>
     </div>
