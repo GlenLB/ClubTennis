@@ -29,7 +29,7 @@ try {
     // Ouverture de la connexion
     $bdd = new PDO("mysql:host=localhost;dbname=CLUBTENNIS", $user, $pass);
     // Récupération des données
-    $req = $bdd->prepare("SELECT EMAIL_ABONNE, MDP_ABONNE FROM ABONNE WHERE EMAIL_ABONNE = ?");
+    $req = $bdd->prepare("SELECT * FROM ABONNE WHERE EMAIL_ABONNE = ?");
     $req->execute(array($email));
     while ($data = $req->fetch()) {
         // Récupération des informations de l'utilisateur effectuée
@@ -38,7 +38,10 @@ try {
         $mdpBDD = $data["MDP_ABONNE"];
         /* Vérification des mots de passe pour la connexion avec password_verify() */
         if ($email == $emailBDD && password_verify($mdp, $mdpBDD)) {
+            /* Utilisateur connecté avec succès */
             echo "success";
+            /* Créer la session */
+            creerSession($data);
             exit();
         } else {
             echo "Le mot de passe renseigné et le mot de passe stocké ne sont pas identiques.";
@@ -47,8 +50,7 @@ try {
     }
 } catch (Exception $e) {
     echo "Erreur : " . $e->getMessage();
-    // TODO: gestion erreur => envoi d'un mail à l'admin pour le prévenir
-    //die();
+    die();
 } finally {
     // Fermeture de la connexion
     $req = null;
@@ -63,17 +65,14 @@ try {
  * Les chaînes de caractères ne contiennent pas d'élément <script></script>
  * TODO: vérifier l'adresse mail avec une expression régulière
  */
-function validationForm($email, $mdp)
-{
+function validationForm($email, $mdp) {
     // Vérification des longueurs de chaînes
     if (strlen($email) < 3) {
         return false;
     }
-
     if (strlen($mdp) < 5) {
         return false;
     }
-
     // Vérification que l'email contient un @ et un .
     if (strpos($email, "@") == false || strpos($email, ".") == false) {
         return false;
@@ -86,4 +85,21 @@ function validationForm($email, $mdp)
         }
     }
     return true;
+}
+
+
+/**
+ * Créé la session en cas de connexion réussie de l'utilisateur
+ * @param data les données de l'utilisateur provenant de la BDD
+ */
+function creerSession($data) {
+    session_start();
+    // Stocke les données utiles en session
+    $_SESSION["prenom"] = $data["PRENOM_ABONNE"];
+    $_SESSION["nom"] = $data["NOM_ABONNE"];
+    $_SESSION["pseudo"] = $data["PSEUDO_ABONNE"];
+    $_SESSION["email"] = $data["EMAIL_ABONNE"];
+    $_SESSION["reduction"] = $data["REDUCTION_ABONNE"];
+    $_SESSION["description"] = $data["DESCRIPTION_ABONNE"];
+    $_SESSION["niveau"] = $data["NIVEAU_ABONNE"];
 }

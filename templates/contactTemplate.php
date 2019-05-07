@@ -6,10 +6,10 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
 		<div id="contactContainer">
 			<form class="formulaire" method="POST" action="contact.php">
 				<h2>Pour toutes questions</h2>
-				<input type="text" placeholder="Votre nom*" id="nom" required />
-				<input type="text" placeholder="Votre prénom*" required />
-				<input type="email" placeholder="Votre mail*" required />
-				<textarea placeholder="Votre message"></textarea>
+				<input type="text" placeholder="*Votre nom" id="nom" required />
+				<input type="text" placeholder="*Votre prénom" required />
+				<input type="email" placeholder="*Votre mail" required />
+				<textarea placeholder="*Votre message" required></textarea>
 				<a href="#" class="btn">ENVOYER</a>
 			</form>
 
