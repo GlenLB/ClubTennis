@@ -3,6 +3,7 @@ import * as accueil from "./accueil.js";
 // Autres imports
 import * as inscription from "../../bdd/js/inscription.js";
 import * as connexion from "../../bdd/js/connexion.js";
+import * as deconnexion from "../../bdd/js/deconnexion.js";
 import * as DSB from "../../DSB/page_web/execution_requetes.js";
 
 window.onload = () => {
@@ -51,7 +52,7 @@ window.onload = () => {
     main.onclick = handleHamburgerMain
 
 
-    // ICON USER CONNEXION && MODAL CONNEXION -----------------------------------------------
+    // ICON USER CONNEXION && MODAL CONNEXION && BTN CONNEXION NAVBAR && MODALE USER -----------------------------------------------
 
     // Modale de connexion
     const btnConnexionNavbar = document.querySelectorAll(".btnConnexionNavbar");
@@ -59,13 +60,15 @@ window.onload = () => {
     const userIcons = document.querySelectorAll(".userIcon");
     // Modale de connexion
     const modalConnect = document.querySelector("#modalConnect");
+    // Modale espace abonné
+    const modaleEspaceAbonne = document.querySelector("#modaleEspaceAbonne")
     // Bouton de fermeture de la modale de connexion
     const btnClose = document.querySelector("#modalClose");
     if (btnConnexionNavbar != null) {
         btnConnexionNavbar.forEach(btn => btn.onclick = handleUserBtnConnexionNavbarAndBtnCloseClick);
         btnClose.onclick = handleUserBtnConnexionNavbarAndBtnCloseClick;
     }
-    if(userIcons != null) {
+    if (userIcons != null) {
         userIcons.forEach(icon => icon.onclick = handleClickUserSpace)
     }
     modalConnect.style.display = "none"
@@ -82,7 +85,7 @@ window.onload = () => {
      * Toggle la modale de l'espace abonné
      */
     function handleClickUserSpace() {
-
+        modaleEspaceAbonne.style.display == "flex" ? modaleEspaceAbonne.style.display = "none" : modaleEspaceAbonne.style.display = "flex";
     }
 
 
@@ -118,5 +121,9 @@ window.onload = () => {
 
     /* Pour un chargement de la page propre */
     document.body.style.opacity = 1;
+
+
+    // DECONNEXION ------------------------------------------
+    deconnexion.exec();
 
 }

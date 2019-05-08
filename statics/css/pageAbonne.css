@@ -1,0 +1,52 @@
+#abonneMain {
+    display: flex;
+    padding: 10px;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 70px;
+}
+
+#abonneMain>h1 {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+#abonneMain>h3 {
+    color: silver;
+}
+
+#abonneMain>form {
+    box-shadow: 0px 0px 4px grey;
+	display: flex;
+	flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+#abonneMain>form>header {
+	padding: 0px;
+    text-align: center;
+    margin: 0px;
+    border-bottom: 1px dotted silver;
+}
+
+#abonneMain>form>.body {
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+#abonneMain>form input, #abonneMain>form textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid silver;
+}
+
+#abonneMain>form label {
+    color: grey;
+}
+
+#abonneMain>form .btn {
+    margin-top: 10px;
+}

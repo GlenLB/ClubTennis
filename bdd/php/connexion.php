@@ -101,15 +101,15 @@ function creerSession($data) {
     $_SESSION["email"] = $data["EMAIL_ABONNE"];
     $_SESSION["reduction"] = $data["REDUCTION_ABONNE"];
     $_SESSION["description"] = $data["DESCRIPTION_ABONNE"];
-    switch ($_SESSION["niveau"]) {
+    switch ($data["NIVEAU_ABONNE"]) {
         case "D":
-        $data["NIVEAU_ABONNE"] = "Débutant";
+        $_SESSION["niveau"] = "Débutant";
         break;
         case "I":
-        $data["NIVEAU_ABONNE"] = "Intermédiaire";
+        $_SESSION["niveau"] = "Intermédiaire";
         break;
         case "D":
-        $data["NIVEAU_ABONNE"] = "Avancé";
+        $_SESSION["niveau"] = "Avancé";
         break;
     }
 }

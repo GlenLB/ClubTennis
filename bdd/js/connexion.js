@@ -52,6 +52,7 @@ export function exec() {
                         document.querySelector("#modalConnect").insertBefore(msgRetour, document.querySelector("#modalConnect>form"));
                         console.log("connexion ok");
                         console.log(response);
+                        window.location.reload();
                     }
                 }
             }

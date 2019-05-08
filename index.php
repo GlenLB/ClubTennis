@@ -66,11 +66,23 @@ switch ($requestURI) {
         // Inclusion du template
         include_once $rootDir . "/templates/contactTemplate.php";
         break;
+    case "/compte-abonne":
+        $page = new Page(
+            "Espace abonné du club de tennis EarthLoader",
+            "Espace abonné du club de tennis EarthLoader",
+            $fullHost . $requestURI
+        );
+        // Inclusion du template
+        include_once $rootDir . "/templates/abonneTemplate.php";
+        break;
     case "/apiInscription":
         include_once $rootDir . "/bdd/php/inscription.php";
         break;
     case "/apiConnexion":
         include_once $rootDir . "/bdd/php/connexion.php";
+        break;
+    case "/apiDeconnexion":
+        include_once $rootDir . "/bdd/php/deconnexion.php";
         break;
     case "/dsb":
         include_once $rootDir . "/DSB/page_web/dsbTemplate.php";

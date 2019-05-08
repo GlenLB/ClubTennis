@@ -114,9 +114,21 @@ nav h2 {
 	right: 10%;
 }
 
+#btnConnexionNavbarMobile {
+	display: none;
+}
+
 @media(max-width: 1050px) {
 	#userIcon {
 		display: none;
+	}
+	#btnConnexionNavbar {
+		display: none;
+	}
+	#btnConnexionNavbarMobile {
+		display: block;
+		max-width: 200px;
+		margin-top: 20px;
 	}
 }
 

@@ -14,6 +14,8 @@
 @import url("../../DSB/page_web/dsb.css");
 /* Import fichier CSS espace abonné */
 @import url("./espaceAbonne.css");
+/* Import fichier CSS page abonné */
+@import url("./pageAbonne.css");
 /* Import fichier CSS footer */
 @import url("./footer.css");
 

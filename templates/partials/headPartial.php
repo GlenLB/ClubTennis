@@ -20,11 +20,6 @@ session_start();
 </head>
 
 <body>
-    <?php
-if ($_SESSION["prenom"]) {
-    echo ($_SESSION["prenom"]);
-}
-?>
     <!-- Header -->
     <header>
         <!-- Menu hamburger mobile -->
@@ -42,13 +37,12 @@ if ($_SESSION["prenom"]) {
             <?php
                 // Si l'utilisateur n'est pas connecté, affiche le bouton de connexion
                 if (!$_SESSION["prenom"]) {
-                    echo ('<a id="btnConnexionNavbar" class="btn btnConnexionNavbar">SE CONNECTER</a>');
+                    echo ('<a id="btnConnexionNavbarMobile" class="btn btnConnexionNavbar">SE CONNECTER</a>');
                 } else {
                     // Si l'utilisateur est connecté, affiche l'icone d'espace abonné
                     echo ('<i id="userIconMobile" class="far fa-user userIcon"></i>');
                 }
             ?>
-            <i id="userIconMobile" class="far fa-user userIcon"></i>
         </div>
         <!-- Navigation -->
         <nav>
@@ -84,6 +78,7 @@ if ($_SESSION["prenom"]) {
             <input type="text" placeholder="email">
             <input type="password" placeholder="mot de passe">
             <a href="#1" class="btn">SE CONNECTER</a>
+            <a id="mdpOublie" href="#1">Mot de passe oublié ?</a>
         </form>
     </div>
     <!-- Modal espace abonné -->
@@ -93,8 +88,7 @@ if ($_SESSION["prenom"]) {
         <i><?= $_SESSION["email"] ?></i>
         <i><?= $_SESSION["description"] ?></i>
         <i>Niveau tennis : <?= $_SESSION["niveau"] ?></i>
-        <a class="info" href="#1">Changer mes informations</a>
-        <a class="info" href="#1">Mot de passe perdu ?</a>
+        <a class="info" href="compte-abonne">Changer mes informations</a>
         <a id="deconnexion" href="#1" class="btn">DÉCONNEXION</a>
         <a class="red" href="#1">Supprimer mon compte</a>
     </div>

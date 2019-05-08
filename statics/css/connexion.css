@@ -1,23 +1,39 @@
+#modalConnect h3 {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+
 /* Stylise la div qui informe l'utilisateur du succes ou non de sa connexion */
+
 .connexionRetour {
 	position: fixed;
-    font-weight: bold;
+	font-weight: bold;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	min-height: 50px;
 	max-width: 350px;
-    border-radius: 5px;
-    color: white;
+	border-radius: 5px;
+	color: white;
 	padding: 10px;
 }
+
 .connexionSuccess {
 	background-color: yellowgreen;
 }
+
 .connexionError {
 	background-color: red;
 }
+
+#mdpOublie {
+	margin-top: 25px;
+	margin-bottom: -15px;
+	text-align: center;
+}
+
 @media(max-width: 550px) {
 	#connexionBox input {
 		margin-bottom: 5px;
