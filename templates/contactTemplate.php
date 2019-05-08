@@ -3,24 +3,36 @@
 include_once $rootDir . "/templates/partials/headPartial.php";?>
 
 	<main id="contactMain">
+		<h1>Contactez Earthloader</h1>
 		<div id="contactContainer">
-			<form class="formulaire" method="POST" action="contact.php">
-				<h2>Pour toutes questions</h2>
-				<input type="text" placeholder="*Votre nom" id="nom" required />
-				<input type="text" placeholder="*Votre prénom" required />
-				<input type="email" placeholder="*Votre mail" required />
-				<textarea placeholder="*Votre message" required></textarea>
-				<a href="#" class="btn">ENVOYER</a>
+			<form class="formulaire">
+				<h2>Par email</h2>
+				<input type="email" placeholder="Email" required />
+				<textarea placeholder="Message" required></textarea>
+				<a href="#1" class="btn">ENVOYER</a>
 			</form>
 
 			<div id="contact_autre">
-				<h2>Contactez-nous</h2>
-				<p id="paragraphe1"><i class="fas fa-phone-square"></i><br/>06 05 63 66 36</p>
-				<p><i class="fas fa-envelope"></i><br/>earthloader@clubtennis.fr</p>
-				<p><i class="fas fa-location-arrow"></i><br/>Club de Tennis Earthloader<br/>
+				<p id="paragraphe1">
+					<i class="fas fa-phone-square"></i><br/>
+					06 05 63 66 36
+				</p>
+				<p>
+					<i class="fas fa-envelope"></i><br/>
+					earthloader@clubtennis.fr
+				</p>
+				<p>
+					<i class="fas fa-location-arrow"></i><br/>
+					Club de Tennis Earthloader<br/>
 					1 rue de la Salle, <br/>
-					85100, Les Sables-d'Olonne <br/><br/>
-					Horaires : du lundi au samedi de 9h00 à 12h00 puis de 14h30 à 19h30.
+					85100, Les Sables-d'Olonne
+				</p>
+				<p>
+					<h3>Horaires</h3>
+					<ul>
+						<li>Du lundi au samedi de 9h00 à 12h00</li>
+						<li>Dimanche de 14h30 à 19h30</li>
+					</ul>
 				</p>
 			</div>
 		</div>
