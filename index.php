@@ -87,6 +87,9 @@ switch ($requestURI) {
     case "/apiChangementInfosAbonne":
         include_once $rootDir . "/bdd/php/changementInfosAbonne.php";
         break;
+    case "/apiEnvoiMail":
+        include_once $rootDir . "/bdd/php/envoiMail.php";
+        break;
     case "/dsb":
         include_once $rootDir . "/DSB/page_web/dsbTemplate.php";
         break;

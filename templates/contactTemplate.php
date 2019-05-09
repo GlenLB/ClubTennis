@@ -7,9 +7,9 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
 		<div id="contactContainer">
 			<form class="formulaire">
 				<h2>Par email</h2>
-				<input type="email" placeholder="Email" required />
+				<input id="emailContact" type="email" placeholder="Email" required />
 				<textarea placeholder="Message" required></textarea>
-				<a href="#1" class="btn">ENVOYER</a>
+				<div id="btnEnvoiMailContact" class="btn">ENVOYER</div>
 			</form>
 
 			<div id="contact_autre">

@@ -132,4 +132,29 @@ window.onload = () => {
         changementInfosAbonne.exec();
     }
 
+
+    // ENVOI DE MAIL ------------------------------------------
+    if (location.pathname == "/contact") {
+        const btnEnvoiMail = document.querySelector("#btnEnvoiMailContact");
+        btnEnvoiMail.onclick = handleEnvoiEmail
+
+        function handleEnvoiEmail() {
+            const emailAbonne = document.querySelector("#contactContainer #emailContact").value;
+            const messageMail = document.querySelector("#contactContainer textarea").value;
+
+            const headers = new Headers({ "Content-Type": "application/x-www-form-urlencoded" });
+            const settings = {
+                method: "POST",
+                headers: headers,
+                body: `email=${emailAbonne}&message=${messageMail}`
+            };
+            fetch("/apiEnvoiMail", settings)
+                .then((reponse) => {
+                    console.log(reponse.text());
+                    //TODO: retour utilisateur
+                })
+                .catch((err) => console.log(err.text()))
+        }
+    }
+
 }
