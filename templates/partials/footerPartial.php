@@ -14,7 +14,9 @@
     </footer>
     <script defer type="module" src="./bdd/js/inscription.js"></script>
     <script defer type="module" src="./bdd/js/connexion.js"></script>
+    <script defer type="module" src="./bdd/js/deconnexion.js"></script>
     <script defer type="module" src="./statics/js/global.js"></script>
     <script defer type="module" src="./statics/js/accueil.js"></script>
+    <script defer type="module" src="./bdd/js/changementInfosAbonne.js"></script>
 </body>
 </html>

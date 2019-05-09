@@ -85,8 +85,9 @@ session_start();
     <div id="modaleEspaceAbonne">
         <i id="infoConnexion"><i class="fas fa-check-square"></i> Connecté</i>
         <i><?= $_SESSION["prenom"] . " " . $_SESSION["nom"] ?></i>
+        <i><?= $_SESSION["pseudo"] ?></i>
         <i><?= $_SESSION["email"] ?></i>
-        <i><?= $_SESSION["description"] ?></i>
+        <i>"<?= $_SESSION['description'] ?>"</i>
         <i>Niveau tennis : <?= $_SESSION["niveau"] ?></i>
         <a class="info" href="compte-abonne">Changer mes informations</a>
         <a id="deconnexion" href="#1" class="btn">DÉCONNEXION</a>

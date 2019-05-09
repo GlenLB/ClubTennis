@@ -42,13 +42,12 @@ try {
         echo "success";
     } else {
         echo "Insertion non réussie";
-        // TODO: gestion erreur => envoi d'un mail à l'admin pour le prévenir
+        exit();
     }
 
 } catch (Exception $e) {
     echo "Erreur : " . $e->getMessage();
-    // TODO: gestion erreur => envoi d'un mail à l'admin pour le prévenir
-    //die();
+    exit();
 } finally {
     // Fermeture de la connexion
     $req = null;

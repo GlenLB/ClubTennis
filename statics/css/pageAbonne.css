@@ -27,7 +27,8 @@
 	padding: 0px;
     text-align: center;
     margin: 0px;
-    border-bottom: 1px dotted silver;
+    color: white;
+    background-color: var(--mainColor);
 }
 
 #abonneMain>form>.body {
@@ -41,9 +42,6 @@
     padding: 5px;
     margin-bottom: 10px;
     border: 1px solid silver;
-}
-
-#abonneMain>form label {
     color: grey;
 }
 

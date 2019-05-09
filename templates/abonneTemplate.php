@@ -17,16 +17,16 @@ if (!$_SESSION["prenom"]) {
             </header>
             <div class="body">
                 <label for="">Prénom</label>
-                <input type="text" value="<?=$_SESSION['prenom']?>">
+                <input id="prenom" type="text" value="<?=$_SESSION['prenom']?>">
                 <label for="">Nom</label>
-                <input type="text" value="<?=$_SESSION['nom']?>">
+                <input id="nom" type="text" value="<?=$_SESSION['nom']?>">
                 <label for="">Pseudo</label>
-                <input type="text" value="<?=$_SESSION['pseudo']?>">
+                <input id="pseudo" type="text" value="<?=$_SESSION['pseudo']?>">
                 <label for="">Adresse email</label>
-                <input type="text" value="<?=$_SESSION['email']?>">
+                <input id="email" type="text" value="<?=$_SESSION['email']?>">
                 <label for="">Description</label>
-                <textarea><?=$_SESSION['description']?></textarea>
-                <div class="btn">ACTUALISER MES INFORMATIONS</div>
+                <textarea id="description"><?=$_SESSION['description']?></textarea>
+                <div id="btnChangementInfosAbonne" class="btn">ACTUALISER MES INFORMATIONS</div>
             </div>
         </form>
 	</main>

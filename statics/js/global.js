@@ -4,6 +4,7 @@ import * as accueil from "./accueil.js";
 import * as inscription from "../../bdd/js/inscription.js";
 import * as connexion from "../../bdd/js/connexion.js";
 import * as deconnexion from "../../bdd/js/deconnexion.js";
+import * as changementInfosAbonne from "../../bdd/js/changementInfosAbonne.js";
 import * as DSB from "../../DSB/page_web/execution_requetes.js";
 
 window.onload = () => {
@@ -125,5 +126,10 @@ window.onload = () => {
 
     // DECONNEXION ------------------------------------------
     deconnexion.exec();
+
+    // CHANGEMENT DES INFORMATIONS DE L'ABONNÉ ------------------------------------------
+    if (location.pathname == "/compte-abonne") {
+        changementInfosAbonne.exec();
+    }
 
 }
