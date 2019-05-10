@@ -24,12 +24,13 @@ if(!validationForm($prenom, $nom, $email, $mdp)) {
 // INSERTION DES DONNEES DANS LA BDD -------------------------
 
 // Informations de connexion
-$user = "glen";
+$user = getenv("MYSQL_USER");
 $pass = getenv("MYSQL_PASS");
+$bddName = getenv("BDD_NAME");
 
 try {
     // Ouverture de la connexion
-    $bdd = new PDO("mysql:host=localhost;dbname=CLUBTENNIS", $user, $pass);
+    $bdd = new PDO("mysql:host=localhost;dbname=" . $bddName, $user, $pass);
     // Préparation de l'insertion
     $req = $bdd->prepare("INSERT INTO ABONNE(PRENOM_ABONNE, NOM_ABONNE, EMAIL_ABONNE, MDP_ABONNE) VALUES (?, ?, ?, ?)");
     $req->bindParam(1, $prenom);

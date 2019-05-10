@@ -22,12 +22,13 @@ if (!validationForm($email, $mdp)) {
 // RÉCUPÉRATION DES DONNEES DANS LA BDD -------------------------
 
 // Informations de connexion
-$user = "glen";
+$user = getenv("MYSQL_USER");
 $pass = getenv("MYSQL_PASS");
+$bddName = getenv("BDD_NAME");
 
 try {
     // Ouverture de la connexion
-    $bdd = new PDO("mysql:host=localhost;dbname=CLUBTENNIS", $user, $pass);
+    $bdd = new PDO("mysql:host=localhost;dbname=" . $bddName, $user, $pass);
     // Récupération des données
     $req = $bdd->prepare("SELECT * FROM ABONNE WHERE EMAIL_ABONNE = ?");
     $req->execute(array($email));
@@ -39,10 +40,9 @@ try {
         /* Vérification des mots de passe pour la connexion avec password_verify() */
         if ($email == $emailBDD && password_verify($mdp, $mdpBDD)) {
             /* Utilisateur connecté avec succès */
-            echo "success";
             /* Créer la session */
             creerSession($data);
-            exit();
+            echo "success";
         } else {
             echo "Le mot de passe renseigné et le mot de passe stocké ne sont pas identiques.";
             exit();

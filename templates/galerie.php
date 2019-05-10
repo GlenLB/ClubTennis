@@ -16,11 +16,13 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
 		<?php
 		// RÉCUPÉRATION DES IMAGES DANS LA BDD -------------------------
 		// Informations de connexion
-		$user = "glen";
+		$user = getenv("MYSQL_USER");
 		$pass = getenv("MYSQL_PASS");
+		$bddName = getenv("BDD_NAME");
+
 		try {
 			// Ouverture de la connexion
-			$bdd = new PDO("mysql:host=localhost;dbname=CLUBTENNIS", $user, $pass);
+			$bdd = new PDO("mysql:host=localhost;dbname=" . $bddName, $user, $pass);
 			// Recuperation des images
 			$reponse = $bdd->query("SELECT CONTENT FROM GALERIE ORDER BY ID");
 

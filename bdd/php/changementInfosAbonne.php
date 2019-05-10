@@ -21,12 +21,13 @@ $description = htmlspecialchars($_POST["description"]);
 // RECUPERATION DES DONNEES DANS LA BDD -------------------------
 
 // Informations de connexion
-$user = "glen";
+$user = getenv("MYSQL_USER");
 $pass = getenv("MYSQL_PASS");
+$bddName = getenv("BDD_NAME");
 
 try {
     // Ouverture de la connexion
-    $bdd = new PDO("mysql:host=localhost;dbname=CLUBTENNIS", $user, $pass);
+    $bdd = new PDO("mysql:host=localhost;dbname=" . $bddName, $user, $pass);
     // Si l'email a changé, vérifie que la nouvelle adresse email n'est pas déjà stockée en BDD
     if($email != $emailSession) {
         $req = $bdd->prepare("SELECT * FROM ABONNE WHERE EMAIL_ABONNE = ?");

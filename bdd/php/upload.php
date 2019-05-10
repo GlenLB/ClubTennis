@@ -36,10 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($boolean == true) {
                     try {
                         // Informations de connexion
-                        $user = "glen";
+                        $user = getenv("MYSQL_USER");
                         $pass = getenv("MYSQL_PASS");
-                        // Connexion
-                        $bdd = new PDO("mysql:host=localhost;dbname=CLUBTENNIS", $user, $pass);
+                        $bddName = getenv("BDD_NAME");
+                        // Ouverture de la connexion
+                        $bdd = new PDO("mysql:host=localhost;dbname=" . $bddName, $user, $pass);
                         // Ajoute le nom de l'image dans la table GALERIE
                         $req = $bdd->prepare('INSERT INTO GALERIE(CONTENT) VALUES (?)');
                         $req->execute(array($filename));
