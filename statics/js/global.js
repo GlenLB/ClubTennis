@@ -135,10 +135,14 @@ window.onload = () => {
 
     // ENVOI DE MAIL ------------------------------------------
     if (location.pathname == "/contact") {
+        const formContact = document.querySelector("#contactContainer form");
         const btnEnvoiMail = document.querySelector("#btnEnvoiMailContact");
+        let retour = document.createElement("div");
+        retour.style.marginTop = "15px";
         btnEnvoiMail.onclick = handleEnvoiEmail
 
         function handleEnvoiEmail() {
+            retour.className = "inscriptionRetour";
             const emailAbonne = document.querySelector("#contactContainer #emailContact").value;
             const messageMail = document.querySelector("#contactContainer textarea").value;
 
@@ -149,11 +153,28 @@ window.onload = () => {
                 body: `email=${emailAbonne}&message=${messageMail}`
             };
             fetch("/apiEnvoiMail", settings)
-                .then((reponse) => {
-                    console.log(reponse.text());
-                    //TODO: retour utilisateur
+                .then((reponse) => reponse.text()
+                    .then(reponse => {
+                        console.log(reponse);
+                        if (reponse === "Message envoyé") {
+                            handleRetour(true);
+                        } else handleRetour(false);
+                    }))
+                .catch((err) => {
+                    console.log(err);
+                    handleRetour(false);
                 })
-                .catch((err) => console.log(err.text()))
+        }
+
+        function handleRetour(success) {
+            if (success) {
+                retour.classList.add("inscriptionSuccess");
+                retour.innerHTML = "Message envoyé avec succès. Nous y répondrons dans les meilleurs délais.";
+            } else {
+                retour.classList.add("inscriptionError");
+                retour.innerHTML = "Il y a eu une erreur lors de l'envoi de l'email. Merci de réessayer dans quelques minutes ou de choisir un autre moyen de contact.";
+            }
+            formContact.appendChild(retour);
         }
     }
 
