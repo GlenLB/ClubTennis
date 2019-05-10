@@ -1,0 +1,16 @@
+#adminMain {
+	margin-top: 140px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#adminMain form {
+	box-shadow: 0 0 4px silver;
+	padding: 40px;
+}
+
+#adminMain .btn {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

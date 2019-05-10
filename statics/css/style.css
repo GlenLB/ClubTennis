@@ -18,6 +18,8 @@
 @import url("./pageAbonne.css");
 /* Import fichier CSS page galerie */
 @import url("./galerie.css");
+/* Import fichier CSS page admin */
+@import url("./admin.css");
 /* Import fichier CSS footer */
 @import url("./footer.css");
 

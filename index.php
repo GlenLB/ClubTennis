@@ -84,6 +84,17 @@ switch ($requestURI) {
         // Inclusion du template
         include_once $rootDir . "/templates/galerie.php";
         break;
+    case "/admin":
+        $page = new Page(
+            "Espace admin",
+            "Espace admin",
+            $fullHost . $requestURI
+        );
+        // Inclusion du template
+        include_once $rootDir . "/templates/admin.php";
+        break;
+
+    // API -------------------------------------------------------
     case "/apiInscription":
         include_once $rootDir . "/bdd/php/inscription.php";
         break;
@@ -98,6 +109,9 @@ switch ($requestURI) {
         break;
     case "/apiEnvoiMail":
         include_once $rootDir . "/bdd/php/envoiMail.php";
+        break;
+    case "/apiUpload":
+        include_once $rootDir . "/bdd/php/upload.php";
         break;
     case "/dsb":
         include_once $rootDir . "/DSB/page_web/dsbTemplate.php";
