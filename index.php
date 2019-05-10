@@ -20,9 +20,9 @@ function loadEnvVar() {
     }
 }
 // Charge les variables d'environnement si elles ne sont pas chargées
-//if(!getenv("TENNISROOTDIR")) {
+if(!getenv("TENNISROOTDIR")) {
     loadEnvVar();
-//}
+}
 
 // Récupération de l'URI
 $requestURI = $_SERVER["REQUEST_URI"];
