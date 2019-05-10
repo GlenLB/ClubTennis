@@ -21,7 +21,7 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
 		<section id="section1" class="section">
 			<img src="<?= $fullHost . '/statics/img/terrain_tennis_exterieur.jpg'?>" />
 			<p>
-				Notre club de tennis, Earthloader, possède de sublimes terrains extérieurs se situant au bord de la mer. Ainsi, qu'un complexe intérieur se trouvant à 500 mètres de la plage. Cela permet ainsi de pratiquer en été comme en hiver (Et oui, même pendant les vacances !). Chaque année, de nouvelles recrues font leur apparition au sein de notre club. Cette nouvelle ère de fraicheur permet de faire agrandir notre club ainsi que notre équipe de professionnels encadrants. Si vous voulez profiter d'autres photos sur notre club ainsi que sur sa situation géographique, je vous convie à aller dans notre <a id="mot" href="galerie.html"><em>galerie</em></a>.
+				Notre club de tennis, Earthloader, possède de sublimes terrains extérieurs se situant au bord de la mer. Ainsi, qu'un complexe intérieur se trouvant à 500 mètres de la plage. Cela permet ainsi de pratiquer en été comme en hiver (Et oui, même pendant les vacances !). Chaque année, de nouvelles recrues font leur apparition au sein de notre club. Cette nouvelle ère de fraicheur permet de faire agrandir notre club ainsi que notre équipe de professionnels encadrants. Si vous voulez profiter d'autres photos sur notre club ainsi que sur sa situation géographique, je vous convie à aller dans notre <a id="mot" href="/galerie"><em>galerie</em></a>.
 			</p>
 		</section>
 		<section id="section2" class="section">
