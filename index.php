@@ -3,6 +3,22 @@
  * Routeur
  */
 
+/**
+ * Création des variables d'environnement pour le bon fonctionnement du site web
+ * Les variables d'environnement doivent être crées dans un fichier .env à la racine du projet
+ */
+function loadEnvVar() {
+    $envFile = file_get_contents('./.env', FILE_USE_INCLUDE_PATH);
+    $tabEnvFile = explode("\n", $envFile);
+    foreach($tabEnvFile as $envVar) {
+        putenv($envVar);
+    }
+}
+// Charge les variables d'environnement si elles ne sont pas chargées
+if(!getenv("TENNISROOTDIR")) {
+    loadEnvVar();
+}
+
 // Récupération de l'URI
 $requestURI = $_SERVER["REQUEST_URI"];
 // Récupération de l'adresse host
