@@ -1,4 +1,10 @@
 <?php
+// Redirige les visiteurs non connectés
+session_start();
+if(!$_SESSION["prenom"]) {
+	header("Location: /");
+}
+
 // Inclusion du head
 include_once $rootDir . "/templates/partials/headPartial.php";?>
 
@@ -10,7 +16,7 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
 		</ol>
 		<form action="apiUpload" method="post" enctype="multipart/form-data">
 			<input type="file" name="images" id="fileUpload">
-			<input type="submit" name="submit" value="Télécharger" class="btn">
+			<input type="submit" name="submit" value="DÉPOSER" class="btn">
 			<div>
 				<i><b>Note</b> : Seuls les formats <code>.jpg</code>, <code>.jpeg</code> et <code>.png</code> sont autorisés.</i>
 			</div>

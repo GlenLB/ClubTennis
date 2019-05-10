@@ -34,6 +34,7 @@ session_start();
             <a href="/club">LE CLUB</a><br>
             <a href="/contact">CONTACT</a><br>
             <a href="/galerie">GALERIE</a><br>
+            <?php if ($_SESSION["prenom"]) { echo("<a href='/admin'>ADMIN</a><br>"); } ?>
             <?php
                 // Si l'utilisateur n'est pas connecté, affiche le bouton de connexion
                 if (!$_SESSION["prenom"]) {
@@ -56,7 +57,8 @@ session_start();
                 <a href="/inscription">INSCRIPTION</a>
                 <a href="/club">LE CLUB</a>
                 <a href="/contact">CONTACT</a>
-                <a href="/galerie">GALERIE</a><br>
+                <a href="/galerie">GALERIE</a>
+                <?php if ($_SESSION["prenom"]) { echo("<a href='/admin'>ADMIN</a><br>"); } ?>
             </div>
         </nav>
         <!-- Icone connexion espace abonné -->

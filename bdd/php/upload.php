@@ -1,4 +1,7 @@
 <?php
+// Définition du répertoire root du site web
+$rootDir = getenv("TENNISROOTDIR");
+
 // Vérifie si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifie si le fichier a été uploadé sans erreur.
@@ -24,10 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Vérifie le type MIME du fichier
         if (in_array($filetype, $allowed)) {
             // Vérifie si le fichier existe avant de le télécharger.
-            if (file_exists("/statics/img/galerie/" . $_FILES["images"]["name"])) {
+            if (file_exists($rootDir . "/statics/img/galerie/" . $_FILES["images"]["name"])) {
                 echo $_FILES["images"]["name"] . " existe déjà.";
             } else {
-                move_uploaded_file($_FILES["images"]["tmp_name"], "/statics/img/galerie/" . $_FILES["images"]["name"]);
+                move_uploaded_file($_FILES["images"]["tmp_name"], $rootDir . "/statics/img/galerie/" . $_FILES["images"]["name"]);
                 $boolean = true;
                 //Connexion à la bdd
                 if ($boolean == true) {
@@ -40,17 +43,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         // Ajoute le nom de l'image dans la table GALERIE
                         $req = $bdd->prepare('INSERT INTO GALERIE(CONTENT) VALUES (?)');
                         $req->execute(array($filename));
-                        if($req) {
+                        if ($req) {
                             echo "Votre fichier a été téléchargé avec succès.";
                         } else {
                             echo "Une erreur a eu lieu. Merci de réésayer dans quelques minutes.";
                         }
                     } catch (Exception $e) {
                         die('Erreur : ' . $e->getMessage());
+                    } finally {
+                        // Fermeture de la connexion
+                        $req = null;
+                        $bdd = null;
                     }
                 }
             }
-
         } else {
             echo "Erreur: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer. ";
         }
@@ -58,3 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erreur: " . $_FILES["images"]["error"];
     }
 }
+
+// Redirige l'utilisateur vers la galerie d'images
+header("Location: /galerie");

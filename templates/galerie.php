@@ -7,6 +7,13 @@ include_once $rootDir . "/templates/partials/headPartial.php";?>
 		<h1>Galerie de photos</h1>
 
 		<?php
+		// Les membres connectés peuvent ajouter une image
+		if($_SESSION["prenom"]) {
+			echo("<a href='/admin' class='btn'>AJOUTER UNE IMAGE À LA GALERIE</a>");
+		}
+		?>
+
+		<?php
 		// RÉCUPÉRATION DES IMAGES DANS LA BDD -------------------------
 		// Informations de connexion
 		$user = "glen";

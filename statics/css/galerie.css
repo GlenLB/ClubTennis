@@ -6,6 +6,12 @@
 	text-align: center;
 }
 
+#galerieMain .btn {
+	max-width: 300px;
+	margin: auto;
+	margin-bottom: 40px;
+}
+
 #galerieMain tr {
 	display: flex;
 	justify-content: space-around;
