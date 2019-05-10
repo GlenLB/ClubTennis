@@ -75,6 +75,15 @@ switch ($requestURI) {
         // Inclusion du template
         include_once $rootDir . "/templates/abonneTemplate.php";
         break;
+    case "/galerie":
+        $page = new Page(
+            "Galerie d'images du club de tennis Earthloader",
+            "Galerie d'images du club de tennis Earthloader",
+            $fullHost . $requestURI
+        );
+        // Inclusion du template
+        include_once $rootDir . "/templates/galerie.php";
+        break;
     case "/apiInscription":
         include_once $rootDir . "/bdd/php/inscription.php";
         break;

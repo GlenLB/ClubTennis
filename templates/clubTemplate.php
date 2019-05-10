@@ -2,12 +2,21 @@
 // Inclusion du head
 include_once $rootDir . "/templates/partials/headPartial.php";?>
 
-	<main id="contactMain">
+	<main id="clubMain">
 			<section>
 				<div id="historique">
 					<div id="hist_club">
 						<h2>L'Histoire du club</h2>
-						<p><i>Notre club de Tennis Earthloader a ouvert ses portes le 20 Février 2016 aux Sables d'Olonnes. Ce club a été fondé dans le but de répondre aux besoins et aux passionnés de ce sport. Earthloader possède pas moins de 20 employés pour tout ce qui concerne l'extérieur, y compris nos encadrants de cours. Notre équipe diplomée et passionnées sont là pour vous accompagner au sein de ce sport. Avec son cadre idyllique et idéalement placé, vous pouvez profiter de ses alentours touristiques ainsi que de la plage après une bonne séance.</i></p>
+						<p>
+							<i>Notre club de Tennis Earthloader a ouvert ses portes le 20 Février 2016 aux Sables d'Olonnes. Ce club a été fondé dans le but de répondre aux besoins et aux passionnés de ce sport. Earthloader possède pas moins de 20 employés pour tout ce qui concerne l'extérieur, y compris nos encadrants de cours. Notre équipe diplomée et passionnées sont là pour vous accompagner au sein de ce sport. Avec son cadre idyllique et idéalement placé, vous pouvez profiter de ses alentours touristiques ainsi que de la plage après une bonne séance.</i>
+						</p>
+
+						<h3>Avantages du club de tennis EarthLoader</h3>
+						<ol>
+							<li>Notre club fait partie d'une enseigne englobant des milliers de joueurs de tennis. Ils peuvent ainsi vous fournir des conseils sur votre jeu afin de vous améliorer.</li>
+							<li>Earthloader possède des terrains extérieurs ainsi que des terrains intérieurs. Cela permet ainsi à plusieurs groupes de joueurs de jouer tout en s'amusant.</li>
+							<li>Notre Club se situe à côté de la plage, ainsi lors des beaux jours, nous pouvons profiter pour faire un match de tennis puis se rafraîchir grâce à la mer.</li>
+						</ol>
 					</div>
 					</div>
 				</div>

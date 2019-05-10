@@ -1,5 +1,9 @@
-#contactMain {
+#clubMain {
 	margin-top: 140px;
+}
+
+#clubMain h3 {
+	text-align: center;
 }
 
 table {
